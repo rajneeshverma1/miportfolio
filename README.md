@@ -1,5 +1,5 @@
 <div align="center">
-<img alt="Portfolio" src="https://github.com/curiousrajneesh27/Our-Portfolio-/blob/main/banner.png?raw=true" width="90%">
+<img alt="Portfolio" src="https://github.com/curiousrajneesh27/Our-Portfolio-/blob/main/Screenshot%202025-11-23%20004335.png?raw=true" width="90%">
 </div>
 
 # Rajneesh's Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcuriousrajneesh27%2FOur-Portfolio-.git)
