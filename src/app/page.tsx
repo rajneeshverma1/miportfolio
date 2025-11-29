@@ -54,7 +54,7 @@ export default function Page() {
 
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-              Hey! I&apos;m <span className="font-semibold text-foreground">{DATA.name.split(" ")[0]}</span>, ...
+              Hey! I&apos;m <span className="font-semibold text-foreground">{DATA.name.split(" ")[0]}</span>, a Full Stack & DevOps Engineer focused on{" "}
               <span className="font-semibold text-foreground">React</span> and mastering{" "}
               <span className="font-semibold text-foreground">Node.js</span>. I build{" "}
               <span className="font-semibold text-foreground">scalable full stack apps</span>. Currently working on{" "}
