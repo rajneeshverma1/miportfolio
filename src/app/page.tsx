@@ -65,7 +65,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="flex items-center gap-4 flex-wrap">
               <Link
-                href="https://drive.google.com/file/d/1Vf5ghCo3irbSMk1dgsMcJuWHVVyXq-gZ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Vf5ghCo3irbSMk1dgsMcJuWHVVyXq-gZ/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
