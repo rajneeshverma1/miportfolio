@@ -15,7 +15,7 @@ interface ResumeCardProps {
   title: string;
   subtitle?: string;
   href?: string;
-  badges?: readonly string[];
+  badges?: readonly (string | {text: string, color: string})[];
   period: string;
   description?: string;
 }
@@ -44,10 +44,10 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex">
+      <Card className="flex border-none shadow-none !bg-transparent">
         {logoUrl && (
           <div className="flex-none">
-            <Avatar className="border size-12 m-auto bg-white dark:bg-white overflow-hidden">
+            <Avatar className="border size-14 m-auto bg-white dark:bg-white overflow-hidden">
               <AvatarImage
                 src={logoUrl}
                 alt={altText}
@@ -60,17 +60,20 @@ export const ResumeCard = ({
         <div className={cn("flex-grow items-center flex-col group", logoUrl ? "ml-4" : "")}>
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-sm sm:text-base">
                 {title}
                 {badges && (
-                  <span className="inline-flex gap-x-1">
+                  <span className="inline-flex gap-x-1 ml-2">
                     {badges.map((badge, index) => (
                       <Badge
                         variant="secondary"
-                        className="align-middle text-xs"
+                        className={cn(
+                          "align-middle text-xs",
+                          typeof badge === 'object' ? badge.color : ""
+                        )}
                         key={index}
                       >
-                        {badge}
+                        {typeof badge === 'string' ? badge : badge.text}
                       </Badge>
                     ))}
                   </span>
@@ -82,11 +85,11 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+              <div className="text-sm tabular-nums text-muted-foreground text-right">
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {subtitle && <div className="font-sans text-sm">{subtitle}</div>}
           </CardHeader>
           {description && (
             <motion.div

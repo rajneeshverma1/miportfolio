@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Rajneesh",
+  name: "Rajneesh Verma",
   initials: "RV",
   url: "https://dillion.io",
   location: "San Francisco, CA",
@@ -136,14 +136,6 @@ export const DATA = {
       start: "2024",
       end: "2025",
     },
-    {
-      school: "Namaste React",
-      href: "https://namastedev.com",
-      degree: "Advanced React Development Course",
-      logoUrl: "/images.png",
-      start: "2024",
-      end: "2024",
-    },
   ],
   projects: [
     {
@@ -188,7 +180,7 @@ export const DATA = {
     },
     {
       title: "DevTube",
-      href: "#",
+      href: "https://dev-tube.vercel.app/",
       dates: "Mar 2025 - May 2025",
       active: true,
       description:
@@ -203,7 +195,18 @@ export const DATA = {
         "Cloudinary",
         "JWT",
       ],
-      links: [],
+      links: [
+        {
+          type: "Live",
+          href: "https://dev-tube.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/pranjal-barnwal/devTube",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
       image: "/Devtube.png",
       video: "",
     },
