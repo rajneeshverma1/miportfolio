@@ -201,11 +201,6 @@ export const DATA = {
           href: "https://dev-tube.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "GitHub",
-          href: "https://github.com/pranjal-barnwal/devTube",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
       image: "/Devtube.png",
       video: "",
