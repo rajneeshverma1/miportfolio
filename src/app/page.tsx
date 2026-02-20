@@ -4,6 +4,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ModeToggle } from "@/components/mode-toggle";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { ModernExperienceCard } from "@/components/modern-experience-card";
 import { QuoteSection } from "@/components/quote-section";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -12,210 +13,168 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import { Download } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Markdown from "react-markdown";
+import { Icons } from "@/components/icons";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10 px-4 sm:px-6 md:px-8">
-      <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-12">
-          <BlurFade delay={BLUR_FADE_DELAY}>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <Avatar className="size-24 border-2">
-                  <AvatarImage src="/Profile.jpg" alt={DATA.name} />
-                  <AvatarFallback>{DATA.initials}</AvatarFallback>
-                </Avatar>
-                <div>
-                  <h1 className="text-2xl font-black tracking-tight">{DATA.name}</h1>
-                  <p className="text-muted-foreground"><span className="font-semibold text-foreground">Full Stack & DevOps</span> Engineer</p>
-                </div>
-              </div>
-              <ModeToggle />
-            </div>
-          </BlurFade>
+      <section id="hero" className="w-full pt-2 pb-6 px-4 sm:px-6 md:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex justify-end mb-2">
+            <ModeToggle />
+          </div>
 
-          <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <div className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
-                <span className="font-light text-foreground/80">Building </span>
-                <span className="italic font-extrabold text-foreground">AI-powered</span>
-                <span className="font-black text-foreground"> & </span>
-                <span className="italic font-black text-foreground">Full Stack</span>
-                <span className="font-light text-foreground/80"> apps that </span>
-                <span className="font-black relative inline-block bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  make an impact.
-                  <div className="absolute -bottom-2 left-0 h-0.5 w-full bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500"></div>
-                </span>
-              </h2>
-            </div>
-          </BlurFade>
+          <div className="py-2">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+              {/* Left Column: Text Content */}
+              <div className="flex-1 space-y-2 pr-0">
+                <BlurFade delay={BLUR_FADE_DELAY}>
+                  <h1 className="text-3xl sm:text-4xl font-bold text-foreground">
+                    Hi, I&apos;m {DATA.name.split(' ')[0]} 👻
+                  </h1>
+                </BlurFade>
 
-          <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-              Hey! I&apos;m <span className="font-semibold text-foreground">{DATA.name.split(" ")[0]}</span>, a Full Stack & DevOps Engineer focused on{" "}
-              <span className="font-semibold text-foreground">React</span> and mastering{" "}
-              <span className="font-semibold text-foreground">Node.js</span>. I build{" "}
-              <span className="font-semibold text-foreground">scalable full stack apps</span>. Currently working on{" "}
-              <span className="font-semibold text-foreground">modern web products, and DevOps tools</span> that drive real impact.
-            </p>
-          </BlurFade>
+                <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    24-year-old tech enthusiast, sports lover and OS contributor.
+                  </p>
+                </BlurFade>
 
-          <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <div className="flex items-center justify-between gap-4 flex-wrap">
-              <div className="flex items-center gap-4 flex-wrap">
-                <Link
-                  href="https://drive.google.com/file/d/1Vf5ghCo3irbSMk1dgsMcJuWHVVyXq-gZ/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    buttonVariants({ variant: "outline", size: "default" }),
-                    "gap-2 rounded-full"
-                  )}
-                >
-                  Resume
-                  <Download className="size-4" />
-                </Link>
-                {Object.entries(DATA.contact.social)
-                  .filter(([_, social]) => social.navbar)
-                  .map(([name, social]) => (
+                <BlurFade delay={BLUR_FADE_DELAY * 3}>
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                    <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground">
+                      <Icons.globe className="size-3.5 sm:size-4" />
+                      <span>{DATA.location}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground">
+                      <Icons.clock className="size-3.5 sm:size-4" />
+                      <span>{new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true })}</span>
+                    </div>
                     <Link
-                      key={name}
-                      href={social.url}
+                      href="https://drive.google.com/file/d/1Vf5ghCo3irbSMk1dgsMcJuWHVVyXq-gZ/view?usp=drive_link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full"
-                      )}
+                      className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      <social.icon className="size-5" />
-                      <span className="sr-only">{name}</span>
+                      <Icons.resume className="size-3.5 sm:size-4" />
+                      <span>Resume</span>
                     </Link>
-                  ))}
+                  </div>
+                </BlurFade>
               </div>
-              <Link
-                href="mailto:curiousrajneesh2024@gmail.com"
-                className={cn(
-                  buttonVariants({ variant: "default", size: "default" }),
-                  "gap-2 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-                )}
-              >
-                Book a Meeting
-              </Link>
+
+              {/* Right Column: Profile Image */}
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <div className="relative size-24 sm:size-32 rounded-full overflow-hidden border-2 border-border flex-shrink-0">
+                  <Image
+                    src={DATA.avatarUrl}
+                    alt={DATA.name}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </BlurFade>
             </div>
-          </BlurFade>
+          </div>
         </div>
       </section>
       <section id="work">
-        <div className="mx-auto w-full max-w-2xl">
-          <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-semibold tracking-tighter sm:text-2xl italic">Work Experience</h2>
-          </BlurFade>
-          {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
-              <ResumeCard
-                key={work.company}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.end === null ? [{text: "Current", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400"}] : work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
-              />
+        <div className="space-y-12 w-full py-12">
+          <div className="max-w-2xl mx-auto">
+            <BlurFade delay={BLUR_FADE_DELAY * 5}>
+              <h2 className="text-xl font-semibold tracking-tighter sm:text-2xl italic">Work Experience</h2>
             </BlurFade>
-          ))}
-        </div>
+          </div>
+          <div className="space-y-6 max-w-2xl mx-auto">
+            {DATA.work.map((work, id) => (
+              <BlurFade
+                key={work.company}
+                delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+              >
+                <ModernExperienceCard
+                  key={work.company}
+                  title={work.title}
+                  company={work.company}
+                  badges={work.end === null ? [{ text: "Current", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" }] : work.badges}
+                  period={`${work.start} - ${work.end ?? "Present"}`}
+                  description={work.description}
+                />
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
       <section id="education" className="mt-16">
         <div className="mx-auto w-full max-w-2xl">
           <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-semibold tracking-tighter sm:text-2xl italic">Education</h2>
-          </BlurFade>
-          {DATA.education.map((education, id) => (
-            <BlurFade
-              key={education.school}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
-              <ResumeCard
-                key={education.school}
-                href={education.href}
-                logoUrl={education.logoUrl}
-                altText={education.school}
-                title={education.school}
-                subtitle={education.degree}
-                period={`${education.start} - ${education.end}`}
-              />
+            <BlurFade delay={BLUR_FADE_DELAY * 7}>
+              <h2 className="text-xl font-semibold tracking-tighter sm:text-2xl italic">Education</h2>
             </BlurFade>
-          ))}
-        </div>
+            {DATA.education.map((education, id) => (
+              <BlurFade
+                key={education.school}
+                delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+              >
+                <ResumeCard
+                  key={education.school}
+                  href={education.href}
+                  logoUrl={education.logoUrl}
+                  altText={education.school}
+                  title={education.school}
+                  subtitle={education.degree}
+                  period={`${education.start} - ${education.end}`}
+                />
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
       <section id="skills" className="mt-16">
         <div className="mx-auto w-full max-w-2xl">
           <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-semibold tracking-tighter sm:text-2xl italic">Skills</h2>
-          </BlurFade>
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <div className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors">
-                  <div className="w-10 h-10 flex items-center justify-center">
-                    <img 
-                      src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.toLowerCase().replace('.', '').replace(' ', '')
-                        .replace('javascript', 'javascript')
-                        .replace('typescript', 'typescript')
-                        .replace('nextjs', 'nextjs')
-                        .replace('nodejs', 'nodejs')
-                        .replace('express', 'express')
-                        .replace('mongodb', 'mongodb')
-                        .replace('postgresql', 'postgresql')
-                        .replace('mysql', 'mysql')
-                        .replace('prisma', 'prisma')
-                        .replace('docker', 'docker')
-                        .replace('kubernetes', 'kubernetes')
-                        .replace('git', 'git')
-                        .replace('tailwindcss', 'tailwindcss')
-                        .replace('c++', 'cplusplus')
-                        .replace('java', 'java')
-                        .replace('react', 'react')}/${skill.toLowerCase().replace('.', '').replace(' ', '')
-                        .replace('javascript', 'javascript')
-                        .replace('typescript', 'typescript')
-                        .replace('nextjs', 'nextjs')
-                        .replace('nodejs', 'nodejs')
-                        .replace('express', 'express')
-                        .replace('mongodb', 'mongodb')
-                        .replace('postgresql', 'postgresql')
-                        .replace('mysql', 'mysql')
-                        .replace('prisma', 'prisma')
-                        .replace('docker', 'docker')
-                        .replace('kubernetes', 'kubernetes')
-                        .replace('git', 'git')
-                        .replace('tailwindcss', 'tailwindcss')
-                        .replace('c++', 'cplusplus')
-                        .replace('java', 'java')
-                        .replace('react', 'react')}-original.svg`}
-                      alt={skill}
-                      className="w-full h-full object-contain"
-                    />
+            <BlurFade delay={BLUR_FADE_DELAY * 9}>
+              <h2 className="text-xl font-semibold tracking-tighter sm:text-2xl italic">Skills</h2>
+            </BlurFade>
+            <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4">
+              {DATA.skills.map((skill, id) => (
+                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                  <div className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors">
+                    <div className="w-10 h-10 flex items-center justify-center">
+                      <Image
+                        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.toLowerCase().replace(".", "").replace(" ", "")
+                          .replace("javascript", "javascript")
+                          .replace("typescript", "typescript")
+                          .replace("nextjs", "nextjs")
+                          .replace("nodejs", "nodejs")
+                          .replace("express", "express")
+                          .replace("mongodb", "mongodb")
+                          .replace("postgresql", "postgresql")
+                          .replace("mysql", "mysql")
+                          .replace("prisma", "prisma")
+                          .replace("docker", "docker")
+                          .replace("kubernetes", "kubernetes")
+                          .replace("git", "git")
+                          .replace("tailwindcss", "tailwindcss")
+                          .replace("c++", "cplusplus")
+                          .replace("java", "java")
+                          .replace("react", "react")}-original.svg`}
+                        alt={skill}
+                        width={40}
+                        height={40}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <span className="text-xs font-medium text-center">{skill}</span>
                   </div>
-                  <span className="text-xs font-medium text-center">{skill}</span>
-                </div>
-              </BlurFade>
-            ))}
+                </BlurFade>
+              ))}
+            </div>
           </div>
-        </div>
         </div>
       </section>
       <section id="projects">
@@ -279,29 +238,29 @@ export default function Page() {
       <section id="hackathons">
         <div className="mx-auto w-full max-w-2xl">
           <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 15}>
-            <h2 className="text-xl font-semibold tracking-tighter sm:text-2xl italic">Hackathons and Competitions</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 17 + id * 0.05}
-                >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
-        </div>
+            <BlurFade delay={BLUR_FADE_DELAY * 15}>
+              <h2 className="text-xl font-semibold tracking-tighter sm:text-2xl italic">Hackathons and Competitions</h2>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 16}>
+              <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+                {DATA.hackathons.map((project, id) => (
+                  <BlurFade
+                    key={project.title + project.dates}
+                    delay={BLUR_FADE_DELAY * 17 + id * 0.05}
+                  >
+                    <HackathonCard
+                      title={project.title}
+                      description={project.description}
+                      location={project.location}
+                      dates={project.dates}
+                      image={project.image}
+                      links={project.links}
+                    />
+                  </BlurFade>
+                ))}
+              </ul>
+            </BlurFade>
+          </div>
         </div>
       </section>
       <section id="github-contributions" className="w-full py-12">
@@ -311,10 +270,13 @@ export default function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 19}>
             <div className="space-y-2">
-              <img
+              <Image
                 src="https://ghchart.rshah.org/10b981/curiousrajneesh27"
                 alt="GitHub Contribution Chart"
+                width={800}
+                height={200}
                 className="w-full rounded-lg dark:invert dark:hue-rotate-180"
+                unoptimized
               />
               <div className="flex items-center justify-between text-sm text-muted-foreground px-2">
                 <span>481 contributions in the last year</span>

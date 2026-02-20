@@ -4,9 +4,9 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Rajneesh Verma",
   initials: "RV",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  url: "https://curiousrajneesh.vercel.app",
+  location: "Uttar Pradesh, India",
+  locationLink: "https://www.google.com/maps/place/Uttar+Pradesh",
   description:
     "Building AI-powered & Full Stack apps with DevOps that make an impact.",
   summary:
@@ -35,8 +35,8 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "curiousrajneesh2024@gmail.com",
+    tel: "",
     social: {
       GitHub: {
         name: "GitHub",
@@ -71,7 +71,7 @@ export const DATA = {
 
   work: [
     {
-      company: "myeasylearn",
+      company: "myeasylearn - Africa",
       href: "https://myeasylearn.com",
       badges: [],
       location: "Remote",
@@ -83,36 +83,24 @@ export const DATA = {
         "Building scalable ed-tech platform for Africa. Architecting full-stack solutions with modern technologies, implementing DevOps best practices, and establishing CI/CD pipelines for rapid deployment.",
     },
     {
-      company: "Craftix Studio",
+      company: "Dream Smile SaaS - DENTAL SAAS from USA",
+      badges: [],
       href: "#",
-      badges: [],
-      location: "Remote",
-      title: "Software Developer",
-      logoUrl: "/Craftix.png",
-      start: "March 2025",
-      end: "August 2025",
-      description:
-        "Developed custom web applications and client solutions. Built responsive frontends with React and Next.js, implemented backend services with Node.js, and deployed applications using Docker and modern DevOps workflows.",
-    },
-    {
-      company: "Upwork",
-      badges: [],
-      href: "https://upwork.com",
       location: "Remote",
       title: "Full Stack Developer",
-      logoUrl: "/UPWORK.png",
+      logoUrl: "",
       start: "September 2024",
       end: "March 2025",
       description:
         "Delivered full-stack solutions for diverse clients. Built responsive web applications using React, Node.js, and MongoDB. Implemented RESTful APIs, integrated third-party services, and optimized application performance for production environments.",
     },
     {
-      company: "Fiverr",
-      href: "https://fiverr.com",
+      company: "Ayush Realtors - Mumbai",
+      href: "#",
       badges: [],
       location: "Remote",
-      title: "Backend Developer",
-      logoUrl: "/fiverr.png",
+      title: "Full Stack Developer",
+      logoUrl: "",
       start: "February 2024",
       end: "August 2024",
       description:

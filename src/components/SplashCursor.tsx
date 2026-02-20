@@ -59,12 +59,6 @@ function SplashCursor({
 
     let pointers = [new (pointerPrototype as any)()];
 
-    const { gl, ext } = getWebGLContext(canvas);
-    if (!ext.supportLinearFiltering) {
-      config.DYE_RESOLUTION = 256;
-      config.SHADING = false;
-    }
-
     function getWebGLContext(canvas: HTMLCanvasElement) {
       const params = {
         alpha: true,
@@ -73,11 +67,17 @@ function SplashCursor({
         antialias: false,
         preserveDrawingBuffer: false
       };
+
       let gl = canvas.getContext('webgl2', params) as WebGL2RenderingContext | null;
       const isWebGL2 = !!gl;
-      if (!isWebGL2) gl = (canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params)) as WebGL2RenderingContext | null;
+      if (!isWebGL2) {
+        gl = (canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params)) as WebGL2RenderingContext | null;
+      }
 
-      if (!gl) throw new Error('WebGL not supported');
+      if (!gl) {
+        console.warn('Failed to get WebGL context');
+        return null;
+      }
 
       let halfFloat: any;
       let supportLinearFiltering: any;
@@ -144,6 +144,25 @@ function SplashCursor({
       gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
       const status = gl.checkFramebufferStatus(gl.FRAMEBUFFER);
       return status === gl.FRAMEBUFFER_COMPLETE;
+    }
+
+    let webglContext;
+    try {
+      webglContext = getWebGLContext(canvas);
+    } catch (error) {
+      console.warn('WebGL initialization failed:', error);
+      return;
+    }
+
+    if (!webglContext) {
+      console.warn('WebGL not supported, SplashCursor will not render');
+      return;
+    }
+
+    const { gl, ext } = webglContext;
+    if (!ext.supportLinearFiltering) {
+      config.DYE_RESOLUTION = 256;
+      config.SHADING = false;
     }
 
     class Material {
