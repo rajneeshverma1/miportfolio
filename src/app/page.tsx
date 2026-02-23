@@ -180,7 +180,7 @@ export default async function Page() {
                   <div className="space-y-3">
                     <h3 className="text-sm font-semibold text-foreground">{category}</h3>
                     <div className="flex flex-wrap gap-2">
-                      {(skills as string[]).map((skill, skillIndex) => (
+                      {(skills as readonly string[]).map((skill, skillIndex) => (
                         <BlurFade
                           key={skill}
                           delay={BLUR_FADE_DELAY * 10 + categoryIndex * 0.1 + skillIndex * 0.02}
