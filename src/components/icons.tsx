@@ -1,4 +1,4 @@
-import { GlobeIcon, MailIcon, ClockIcon, FileTextIcon, MicIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, ClockIcon, FileTextIcon, MicIcon, DownloadIcon } from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -8,6 +8,7 @@ export const Icons = {
   clock: (props: IconProps) => <ClockIcon {...props} />,
   resume: (props: IconProps) => <FileTextIcon {...props} />,
   podcast: (props: IconProps) => <MicIcon {...props} />,
+  download: (props: IconProps) => <DownloadIcon {...props} />,
   linkedin: (props: IconProps) => (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
       <title>LinkedIn</title>

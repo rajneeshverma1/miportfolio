@@ -16,60 +16,70 @@ import Link from "next/link";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import { Icons } from "@/components/icons";
-
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10 px-4 sm:px-6 md:px-8">
-      <section id="hero" className="w-full pt-2 pb-6 px-4 sm:px-6 md:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section id="hero" className="w-full pt-2 pb-6">
+        <div className="mx-auto max-w-2xl">
           <div className="flex justify-end mb-2">
             <ModeToggle />
           </div>
 
           <div className="py-2">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               {/* Left Column: Text Content */}
-              <div className="flex-1 space-y-2 pr-0">
+              <div className="space-y-2 max-w-xl">
                 <BlurFade delay={BLUR_FADE_DELAY}>
-                  <h1 className="text-3xl sm:text-4xl font-bold text-foreground">
+                  <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
                     Hi, I&apos;m {DATA.name.split(' ')[0]} 👻
                   </h1>
                 </BlurFade>
 
                 <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                  <p className="text-sm sm:text-base text-muted-foreground">
+                  <p className="text-sm text-muted-foreground">
                     24-year-old tech enthusiast, sports lover and OS contributor.
                   </p>
                 </BlurFade>
 
                 <BlurFade delay={BLUR_FADE_DELAY * 3}>
-                  <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-                    <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground">
-                      <Icons.globe className="size-3.5 sm:size-4" />
+                  <div className="flex flex-wrap items-center gap-2">
+                    <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-muted/50 border border-border/50 text-xs text-foreground">
+                      <Icons.globe className="size-3.5" />
                       <span>{DATA.location}</span>
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground">
-                      <Icons.clock className="size-3.5 sm:size-4" />
+                    <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-muted/50 border border-border/50 text-xs text-foreground">
+                      <Icons.clock className="size-3.5" />
                       <span>{new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true })}</span>
                     </div>
-                    <Link
-                      href="https://drive.google.com/file/d/1Vf5ghCo3irbSMk1dgsMcJuWHVVyXq-gZ/view?usp=drive_link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Icons.resume className="size-3.5 sm:size-4" />
-                      <span>Resume</span>
-                    </Link>
+                    <div className="flex items-center gap-1.5">
+                      <Link
+                        href="https://drive.google.com/file/d/1Vf5ghCo3irbSMk1dgsMcJuWHVVyXq-gZ/view?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-muted/50 border border-border/50 text-xs text-foreground hover:bg-muted transition-colors"
+                      >
+                        <Icons.resume className="size-3.5" />
+                        <span>Resume</span>
+                      </Link>
+                      <a
+                        href="https://drive.google.com/file/d/1Vf5ghCo3irbSMk1dgsMcJuWHVVyXq-gZ/view?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center h-8 w-8 rounded-lg bg-foreground text-background hover:bg-foreground/90 transition-colors"
+                        aria-label="Download Resume"
+                      >
+                        <Icons.download className="size-3.5" />
+                      </a>
+                    </div>
                   </div>
                 </BlurFade>
               </div>
 
               {/* Right Column: Profile Image */}
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <div className="relative size-24 sm:size-32 rounded-full overflow-hidden border-2 border-border flex-shrink-0">
+                <div className="relative size-20 sm:size-28 rounded-full overflow-hidden border-2 border-border flex-shrink-0">
                   <Image
                     src={DATA.avatarUrl}
                     alt={DATA.name}
