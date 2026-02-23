@@ -63,12 +63,12 @@ export function ProjectsSection({ projects, title, blurFadeDelay }: ProjectsSect
         ))}
       </div>
       {projects.length > 4 && (
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-end max-w-2xl mx-auto mt-8">
           <BlurFade delay={blurFadeDelay + 0.3}>
             <Button
               onClick={() => setShowAll(!showAll)}
               variant="outline"
-              className="px-6 py-2 rounded-md border border-gray-300 bg-white hover:bg-gray-50 transition-colors text-gray-900"
+              className="px-4 py-1.5 text-sm rounded-md border border-gray-300 bg-white hover:bg-gray-50 transition-colors text-gray-900"
             >
               {showAll ? "Show Less" : "See More"}
             </Button>
