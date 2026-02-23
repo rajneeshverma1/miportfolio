@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -10,6 +12,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { useState } from "react";
 
 interface Props {
   title: string;
@@ -27,6 +30,8 @@ interface Props {
   }[];
   className?: string;
   gradient?: string;
+  amount?: string;
+  badge?: string;
 }
 
 export function ProjectCard({
@@ -41,29 +46,17 @@ export function ProjectCard({
   links,
   className,
   gradient,
+  amount,
+  badge,
 }: Props) {
-  const getGradientClass = () => {
-    if (title === "Netflix GPT" || title === "DevTube") {
-      return "bg-gradient-to-br from-red-600 via-black to-red-800";
-    }
-    if (title === "Dream Smile Dental") {
-      return "bg-gradient-to-br from-white via-red-100 to-red-300";
-    }
-    if (title === "Ayush Realtors") {
-      return "bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300";
-    }
-    if (title === "DevTinder") {
-      return "bg-gradient-to-br from-gray-200 via-white to-gray-100";
-    }
-    return gradient || "bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700";
-  };
-  
-  const gradientClass = getGradientClass();
+  const gradientClass = gradient || "bg-gradient-to-br from-zinc-900 via-black to-zinc-800";
+  const [showAllTags, setShowAllTags] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState(false);
     
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border-2 border-emerald-500/50 hover:border-emerald-500 shadow-lg shadow-emerald-500/20 hover:shadow-2xl hover:shadow-emerald-500/40 hover:-translate-y-1 transition-all duration-300 ease-out h-full group"
+        "flex flex-col overflow-hidden border-2 border-zinc-800/80 hover:border-zinc-700 shadow-lg shadow-black/30 hover:shadow-2xl hover:shadow-black/50 hover:-translate-y-1 transition-all duration-300 ease-out h-full group"
       }
     >
         <Link
@@ -94,20 +87,49 @@ export function ProjectCard({
         </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base text-white">{title}</CardTitle>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <CardTitle className="mt-1 text-base text-white">{title}</CardTitle>
+              {badge && (
+                <span className={cn(
+                  "text-[9px] font-medium px-1.5 py-0.5 rounded-full",
+                  badge === "Current" 
+                    ? "bg-green-500/20 text-green-400 border border-green-500/30" 
+                    : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                )}>
+                  {badge}
+                </span>
+              )}
+            </div>
+            {amount && (
+              <span className="text-xs font-semibold text-green-400 bg-green-500/20 px-2 py-0.5 rounded-full border border-green-500/30">
+                {amount}
+              </span>
+            )}
+          </div>
           <time className="font-sans text-xs text-white">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-white dark:prose-invert">
-            {description}
-          </Markdown>
+          <div className="text-xs text-white">
+            <Markdown className="prose max-w-full text-pretty font-sans text-xs text-white dark:prose-invert">
+              {showFullDescription ? description : description.split('.')[0] + '.'}
+            </Markdown>
+            {description.split('.').length > 2 && (
+              <button
+                onClick={() => setShowFullDescription(!showFullDescription)}
+                className="text-white/70 hover:text-white text-[10px] ml-1 underline"
+              >
+                {showFullDescription ? "less" : "more"}
+              </button>
+            )}
+          </div>
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
-            {tags?.map((tag) => (
+            {(showAllTags ? tags : tags.slice(0, 3))?.map((tag) => (
               <Badge
                 className="px-1 py-0 text-[10px]"
                 variant="secondary"
@@ -116,6 +138,15 @@ export function ProjectCard({
                 {tag}
               </Badge>
             ))}
+            {tags.length > 3 && (
+              <Badge
+                className="px-1 py-0 text-[10px] cursor-pointer"
+                variant="secondary"
+                onClick={() => setShowAllTags(!showAllTags)}
+              >
+                {showAllTags ? "less" : `+${tags.length - 3} more`}
+              </Badge>
+            )}
           </div>
         )}
       </CardContent>

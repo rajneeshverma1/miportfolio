@@ -25,7 +25,7 @@ export function QuoteSection() {
 
         {/* Quote text */}
         <blockquote className="space-y-1.5">
-          <p className="text-sm sm:text-base font-light text-foreground/90 leading-relaxed italic">
+          <p className="text-sm sm:text-base font-light text-foreground/90 leading-relaxed">
             You have the right to work, but never to the fruit of work. You should never engage in action for the sake of reward, nor should you long for inaction.
           </p>
           
