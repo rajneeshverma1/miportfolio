@@ -64,7 +64,7 @@ export default function RootLayout({
         )}
       >
         <SplashCursor />
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           <TooltipProvider delayDuration={0}>
             <div className="relative z-10">
               {children}
