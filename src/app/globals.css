@@ -157,3 +157,225 @@ code[data-line-numbers-max-digits="2"] > [data-line]::before {
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
+/* Responsive breakpoints and utilities */
+@layer utilities {
+  /* Responsive text utilities */
+  .text-responsive-xs {
+    @apply text-[10px] sm:text-xs;
+  }
+  
+  .text-responsive-sm {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .text-responsive-base {
+    @apply text-sm sm:text-base;
+  }
+  
+  .text-responsive-lg {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+  
+  /* Responsive spacing utilities */
+  .space-responsive {
+    @apply space-y-4 sm:space-y-6 md:space-y-8;
+  }
+  
+  .gap-responsive {
+    @apply gap-2 sm:gap-3 md:gap-4;
+  }
+  
+  /* Responsive padding utilities */
+  .p-responsive {
+    @apply p-3 sm:p-4 md:p-6;
+  }
+  
+  .px-responsive {
+    @apply px-3 sm:px-4 md:px-6;
+  }
+  
+  .py-responsive {
+    @apply py-2 sm:py-3 md:py-4;
+  }
+  
+  /* Ensure images scale properly */
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Responsive iframe and embeds */
+  iframe, embed, object {
+    max-width: 100%;
+  }
+  
+  /* Prevent horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Better line height for readability on all devices */
+  p, li, span {
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    p, li, span {
+      line-height: 1.7;
+    }
+  }
+  
+  /* Improve tap targets for mobile */
+  @media (max-width: 768px) {
+    button, a, input, select, textarea {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Prevent text size adjustment on orientation change */
+    html {
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    
+    /* Improve touch scrolling */
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+  /* Ensure smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better focus states for keyboard navigation */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+/* Small mobile devices (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-lg;
+  }
+  
+  h3 {
+    @apply text-base;
+  }
+  
+  /* Adjust card padding for small screens */
+  .card, [class*="Card"] {
+    @apply p-3;
+  }
+  
+  /* Stack elements vertically on small screens */
+  .flex-responsive {
+    @apply flex-col;
+  }
+}
+
+/* Large mobile devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  
+  /* Optimize grid layouts for medium mobile */
+  .grid-responsive {
+    @apply grid-cols-1;
+  }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  
+  /* Two column layouts for tablets */
+  .grid-responsive {
+    @apply grid-cols-2;
+  }
+}
+
+/* Laptops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Default styles work well for this range */
+}
+
+/* Large screens (≥ 1441px) */
+@media (min-width: 1441px) {
+  /* Increase max-width for larger screens */
+  .max-w-responsive {
+    max-width: 1200px;
+  }
+  
+  /* Ensure content doesn't stretch too wide on ultra-wide screens */
+  body {
+    font-size: 17px;
+  }
+}
+
+/* Ultra-wide screens (≥ 1920px) */
+@media (min-width: 1920px) {
+  /* Keep content centered and readable on very large screens */
+  .container, main, section {
+    max-width: 1400px;
+  }
+  
+  /* Slightly larger base font */
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Reduce vertical spacing in landscape */
+  .py-responsive {
+    @apply py-1 sm:py-2;
+  }
+  
+  section {
+    @apply py-4;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    @apply text-black bg-white;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize for retina displays */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

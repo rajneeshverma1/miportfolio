@@ -61,7 +61,7 @@ export function ProjectCard({
     >
         <Link
           href={href || "#"}
-          className={cn("block cursor-pointer p-4 transition-all duration-300", gradientClass, className)}
+          className={cn("block cursor-pointer p-3 sm:p-4 transition-all duration-300", gradientClass, className)}
         >
           <div className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
             {video && (
@@ -71,7 +71,7 @@ export function ProjectCard({
                 loop
                 muted
                 playsInline
-                className="pointer-events-none mx-auto h-40 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105 shadow-2xl"
+                className="pointer-events-none mx-auto h-32 sm:h-36 md:h-40 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105 shadow-2xl"
               />
             )}
             {image && (
@@ -80,7 +80,7 @@ export function ProjectCard({
                 alt={title}
                 width={500}
                 height={300}
-                className="h-40 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105 shadow-2xl"
+                className="h-32 sm:h-36 md:h-40 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105 shadow-2xl"
               />
             )}
           </div>
@@ -88,11 +88,11 @@ export function ProjectCard({
       <CardHeader className="px-2">
         <div className="space-y-1">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <CardTitle className="mt-1 text-base text-white">{title}</CardTitle>
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+              <CardTitle className="mt-1 text-sm sm:text-base text-white truncate">{title}</CardTitle>
               {badge && (
                 <span className={cn(
-                  "text-[9px] font-medium px-1.5 py-0.5 rounded-full",
+                  "text-[8px] sm:text-[9px] font-medium px-1 sm:px-1.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0",
                   badge === "Current" 
                     ? "bg-green-500/20 text-green-400 border border-green-500/30" 
                     : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
@@ -102,23 +102,23 @@ export function ProjectCard({
               )}
             </div>
             {amount && (
-              <span className="text-xs font-semibold text-green-400 bg-green-500/20 px-2 py-0.5 rounded-full border border-green-500/30">
+              <span className="text-[10px] sm:text-xs font-semibold text-green-400 bg-green-500/20 px-1.5 sm:px-2 py-0.5 rounded-full border border-green-500/30 whitespace-nowrap">
                 {amount}
               </span>
             )}
           </div>
-          <time className="font-sans text-xs text-white">{dates}</time>
+          <time className="font-sans text-[10px] sm:text-xs text-white">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <div className="text-xs text-white">
-            <Markdown className="prose max-w-full text-pretty font-sans text-xs text-white dark:prose-invert">
+          <div className="text-[10px] sm:text-xs text-white">
+            <Markdown className="prose max-w-full text-pretty font-sans text-[10px] sm:text-xs text-white dark:prose-invert">
               {showFullDescription ? description : description.split('.')[0] + '.'}
             </Markdown>
             {description.split('.').length > 2 && (
               <button
                 onClick={() => setShowFullDescription(!showFullDescription)}
-                className="text-white/70 hover:text-white text-[10px] ml-1 underline"
+                className="text-white/70 hover:text-white text-[9px] sm:text-[10px] ml-1 underline"
               >
                 {showFullDescription ? "less" : "more"}
               </button>
@@ -131,7 +131,7 @@ export function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {(showAllTags ? tags : tags.slice(0, 3))?.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[10px]"
+                className="px-1 py-0 text-[9px] sm:text-[10px]"
                 variant="secondary"
                 key={tag}
               >
@@ -140,7 +140,7 @@ export function ProjectCard({
             ))}
             {tags.length > 3 && (
               <Badge
-                className="px-1 py-0 text-[10px] cursor-pointer"
+                className="px-1 py-0 text-[9px] sm:text-[10px] cursor-pointer"
                 variant="secondary"
                 onClick={() => setShowAllTags(!showAllTags)}
               >
@@ -155,7 +155,7 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge key={idx} className="flex gap-1 sm:gap-2 px-1.5 sm:px-2 py-0.5 sm:py-1 text-[9px] sm:text-[10px]">
                   {link.icon}
                   {link.type}
                 </Badge>

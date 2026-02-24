@@ -26,10 +26,10 @@ export const OSContributionCard = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 p-4 rounded-lg border border-border/50 bg-card/50 hover:bg-card/80 transition-all hover:shadow-sm group"
+      className="flex items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-lg border border-border/50 bg-card/50 hover:bg-card/80 transition-all hover:shadow-sm group"
     >
       {/* Logo */}
-      <div className="w-12 h-12 flex-shrink-0 rounded-full overflow-hidden bg-white dark:bg-gray-900 flex items-center justify-center">
+      <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-full overflow-hidden bg-white dark:bg-gray-900 flex items-center justify-center">
         <Image
           src={logo}
           alt={name}
@@ -41,17 +41,17 @@ export const OSContributionCard = ({
 
       {/* Content */}
       <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-1.5 mb-0.5">
-          <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
+        <div className="flex items-center gap-1 sm:gap-1.5 mb-0.5">
+          <h3 className="font-semibold text-xs sm:text-sm text-foreground group-hover:text-primary transition-colors truncate">
             {name}
           </h3>
           {(isCurrent || badgeText) && (
-            <span className="px-1 py-0 text-[9px] font-medium rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
+            <span className="px-1 py-0 text-[8px] sm:text-[9px] font-medium rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 whitespace-nowrap">
               {badgeText || "Current"}
             </span>
           )}
         </div>
-        <p className="text-[11px] text-muted-foreground leading-tight">
+        <p className="text-[10px] sm:text-[11px] text-muted-foreground leading-tight line-clamp-2">
           {description}
         </p>
       </div>

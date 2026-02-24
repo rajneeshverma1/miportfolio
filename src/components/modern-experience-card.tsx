@@ -38,25 +38,25 @@ export const ModernExperienceCard = ({
         )}
       >
         {/* Main content row */}
-        <div className="flex items-start justify-between gap-4 sm:gap-6">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-4 md:gap-6">
           {/* Left side: Title and Company */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 w-full sm:w-auto">
             {/* Role Title */}
-            <div className="flex items-center gap-2 flex-wrap mb-1">
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap mb-1">
               <h3 className={cn(
-                "text-lg sm:text-xl font-semibold tracking-tight",
+                "text-base sm:text-lg md:text-xl font-semibold tracking-tight",
                 "transition-opacity duration-300",
                 description && "group-hover:opacity-70"
               )}>
                 {title}
               </h3>
               {badges && badges.length > 0 && (
-                <span className="inline-flex gap-x-1.5">
+                <span className="inline-flex gap-x-1 sm:gap-x-1.5">
                   {badges.map((badge, index) => (
                     <Badge
                       variant="secondary"
                       className={cn(
-                        "text-xs font-medium px-2 py-0 rounded-full",
+                        "text-[9px] sm:text-xs font-medium px-1.5 sm:px-2 py-0 rounded-full",
                         typeof badge === 'object' ? badge.color : "bg-primary/10 text-primary"
                       )}
                       key={index}
@@ -69,14 +69,14 @@ export const ModernExperienceCard = ({
             </div>
             
             {/* Company Name */}
-            <p className="text-sm sm:text-base text-muted-foreground/70 font-normal">
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground/70 font-normal">
               {company}
             </p>
           </div>
 
           {/* Right side: Period */}
-          <div className="flex-shrink-0 text-right">
-            <p className="text-xs sm:text-sm text-muted-foreground/50 font-normal whitespace-nowrap">
+          <div className="flex-shrink-0 text-left sm:text-right">
+            <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground/50 font-normal whitespace-nowrap">
               {period}
             </p>
           </div>
@@ -94,7 +94,7 @@ export const ModernExperienceCard = ({
             transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
             className="overflow-hidden"
           >
-            <p className="text-sm text-muted-foreground/65 leading-relaxed">
+            <p className="text-xs sm:text-sm text-muted-foreground/65 leading-relaxed">
               {description}
             </p>
           </motion.div>

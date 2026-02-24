@@ -4,17 +4,17 @@ import { cn } from "@/lib/utils";
 export function QuoteSection() {
   return (
     <div
-      className="relative w-full max-w-2xl mx-auto px-5 sm:px-6 py-3 sm:py-4 rounded-lg border border-border/50 bg-gradient-to-br from-background via-background to-muted/20 overflow-hidden"
+      className="relative w-full max-w-2xl mx-auto px-4 sm:px-5 md:px-6 py-3 sm:py-4 rounded-lg border border-border/50 bg-gradient-to-br from-background via-background to-muted/20 overflow-hidden"
     >
       {/* Decorative gradient orbs */}
-      <div className="absolute -top-16 -left-16 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute -top-12 -left-12 sm:-top-16 sm:-left-16 w-24 h-24 sm:w-32 sm:h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-12 -right-12 sm:-bottom-16 sm:-right-16 w-24 h-24 sm:w-32 sm:h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
       
       <div className="relative z-10">
         {/* Large quotation mark */}
-        <div className="mb-1.5">
+        <div className="mb-1 sm:mb-1.5">
           <svg
-            className="w-7 h-7 text-muted-foreground/20"
+            className="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground/20"
             fill="currentColor"
             viewBox="0 0 32 32"
             aria-hidden="true"
@@ -24,16 +24,16 @@ export function QuoteSection() {
         </div>
 
         {/* Quote text */}
-        <blockquote className="space-y-1.5">
-          <p className="text-sm sm:text-base font-light text-foreground/90 leading-relaxed">
+        <blockquote className="space-y-1 sm:space-y-1.5">
+          <p className="text-xs sm:text-sm md:text-base font-light text-foreground/90 leading-relaxed">
             You have the right to work, but never to the fruit of work. You should never engage in action for the sake of reward, nor should you long for inaction.
           </p>
           
           {/* Author attribution */}
           <footer className="flex items-center justify-end pt-0.5">
-            <div className="flex items-center gap-1.5">
-              <div className="h-px w-5 bg-gradient-to-r from-transparent to-foreground/30"></div>
-              <cite className="text-xs font-medium text-foreground not-italic">
+            <div className="flex items-center gap-1 sm:gap-1.5">
+              <div className="h-px w-4 sm:w-5 bg-gradient-to-r from-transparent to-foreground/30"></div>
+              <cite className="text-[10px] sm:text-xs font-medium text-foreground not-italic">
                 Bhagavad Gita 2:47
               </cite>
             </div>

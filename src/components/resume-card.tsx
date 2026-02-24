@@ -47,7 +47,7 @@ export const ResumeCard = ({
       <Card className="flex border-none shadow-none !bg-transparent">
         {logoUrl && (
           <div className="flex-none">
-            <Avatar className="border size-14 m-auto bg-white dark:bg-white overflow-hidden">
+            <Avatar className="border size-12 sm:size-14 m-auto bg-white dark:bg-white overflow-hidden">
               <AvatarImage
                 src={logoUrl}
                 alt={altText}
@@ -57,18 +57,18 @@ export const ResumeCard = ({
             </Avatar>
           </div>
         )}
-        <div className={cn("flex-grow items-center flex-col group", logoUrl ? "ml-4" : "")}>
+        <div className={cn("flex-grow items-center flex-col group", logoUrl ? "ml-3 sm:ml-4" : "")}>
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-sm sm:text-base">
+              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm md:text-base">
                 {title}
                 {badges && (
-                  <span className="inline-flex gap-x-1 ml-2">
+                  <span className="inline-flex gap-x-1 ml-1.5 sm:ml-2">
                     {badges.map((badge, index) => (
                       <Badge
                         variant="secondary"
                         className={cn(
-                          "align-middle text-xs",
+                          "align-middle text-[9px] sm:text-xs",
                           typeof badge === 'object' ? badge.color : ""
                         )}
                         key={index}
@@ -80,16 +80,16 @@ export const ResumeCard = ({
                 )}
                 <ChevronRightIcon
                   className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                    "size-3 sm:size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
                     isExpanded ? "rotate-90" : "rotate-0"
                   )}
                 />
               </h3>
-              <div className="text-sm tabular-nums text-muted-foreground text-right">
+              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-sm">{subtitle}</div>}
+            {subtitle && <div className="font-sans text-xs sm:text-sm">{subtitle}</div>}
           </CardHeader>
           {description && (
             <motion.div
