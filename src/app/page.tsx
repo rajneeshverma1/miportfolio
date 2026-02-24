@@ -335,6 +335,42 @@ export default async function Page() {
           </BlurFade>
         </div>
       </section>
+      <section id="contact" className="w-full py-8 sm:py-10 md:py-12">
+        <div className="max-w-2xl mx-auto space-y-6 sm:space-y-7 md:space-y-8">
+          <BlurFade delay={BLUR_FADE_DELAY * 19.5}>
+            <div>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">Hook with me</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground mt-2 leading-relaxed">
+                Let&apos;s connect and build something cool together. Feel free to reach out to me. I&apos;m always open to new opportunities and collaborations. Reach out to me via{" "}
+                <Link
+                  href="mailto:wwrajneesh807@gmail.com"
+                  className="font-medium text-foreground hover:text-blue-500 underline underline-offset-4 transition-colors"
+                >
+                  email: (wwrajneesh807@gmail.com)
+                </Link>{" "}
+                or dm me on{" "}
+                <Link
+                  href="https://x.com/Rajneeshvermaa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-foreground hover:text-blue-500 underline underline-offset-4 transition-colors"
+                >
+                  Twitter
+                </Link>
+                {" "}or{" "}
+                <Link
+                  href="https://www.linkedin.com/in/rajneesh-verma-4a871825b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-foreground hover:text-blue-500 underline underline-offset-4 transition-colors"
+                >
+                  LinkedIn
+                </Link>
+              </p>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
       <BlurFade delay={BLUR_FADE_DELAY * 20}>
         <QuoteSection />
       </BlurFade>
