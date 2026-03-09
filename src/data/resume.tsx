@@ -228,6 +228,41 @@ export const DATA = {
       video: "",
     },
     {
+      title: "InventoryAI",
+      href: "https://lnkd.in/grn_BWqZ",
+      dates: "",
+      active: true,
+      description:
+        "AI-powered inventory management system for retail stores that goes beyond tracking—it decides. Predicts when products run out, suggests exact reorder quantities based on sales velocity, spots dead stock early, flags fast-movers, and includes an AI assistant for instant queries. Built to help store owners make data-driven decisions instead of guesses, preventing stockouts and freeing up cash trapped in dead inventory.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Express",
+        "AI/ML",
+        "OpenAI API",
+        "PostgreSQL",
+        "Prisma",
+        "Tailwind CSS",
+        "Predictive Analytics",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "#",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "https://lnkd.in/grn_BWqZ",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "Sketch Flow",
       href: "#",
       dates: "",
