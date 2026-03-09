@@ -31,7 +31,7 @@ interface ProjectsSectionProps {
 
 export function ProjectsSection({ projects, title, blurFadeDelay }: ProjectsSectionProps) {
   const [showAll, setShowAll] = useState(false);
-  const displayedProjects = showAll ? projects : projects.slice(0, 4);
+  const displayedProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
     <div className="space-y-8 sm:space-y-10 md:space-y-12 w-full py-8 sm:py-10 md:py-12">
@@ -62,7 +62,7 @@ export function ProjectsSection({ projects, title, blurFadeDelay }: ProjectsSect
           </BlurFade>
         ))}
       </div>
-      {projects.length > 4 && (
+      {projects.length > 6 && (
         <div className="flex justify-end max-w-2xl mx-auto mt-6 sm:mt-8">
           <BlurFade delay={blurFadeDelay + 0.3}>
             <Button
