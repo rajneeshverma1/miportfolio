@@ -151,7 +151,7 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "#",
+          href: "https://github.com/rajneeshverma1/Collectly",
           icon: <Icons.github className="size-3" />,
         },
         {
@@ -181,7 +181,7 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "#",
+          href: "https://github.com/rajneeshverma1/main-maticai",
           icon: <Icons.github className="size-3" />,
         },
         {
@@ -216,7 +216,7 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "#",
+          href: "https://github.com/rajneeshverma1/InventoryAI",
           icon: <Icons.github className="size-3" />,
         },
         {
