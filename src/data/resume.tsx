@@ -229,40 +229,6 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Jal Stthiti",
-      href: "#",
-      dates: "",
-      active: true,
-      description:
-        "Real-time Groundwater Resource Evaluation System using DWLR data. A mobile application that leverages data from 5,260 Digital Water Level Recorder stations across India to analyze real-time water level fluctuations, estimate recharge dynamically, and evaluate groundwater resources. Built for Ministry of Jal Shakti (MoJS) - Central Ground Water Board (CGWB) to enable stakeholders, groundwater researchers, and decision makers to have quick access to real-time groundwater availability for scientific evaluation and informed decision-making.",
-      technologies: [
-        "React Native",
-        "TypeScript",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Prisma",
-        "Real-time Data Processing",
-        "Data Visualization",
-        "Geospatial Analysis",
-        "REST API",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "#",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Live",
-          href: "#",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
       title: "Sketch Flow",
       href: "#",
       dates: "",
