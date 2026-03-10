@@ -246,7 +246,7 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "#",
+          href: "https://github.com/rajneeshverma1/Sketch-flow",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -272,7 +272,7 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "#",
+          href: "https://github.com/rajneeshverma1/blitzquiz",
           icon: <Icons.github className="size-3" />,
         },
       ],
