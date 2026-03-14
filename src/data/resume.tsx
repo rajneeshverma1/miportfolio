@@ -49,6 +49,13 @@ export const DATA = {
 
         navbar: true,
       },
+      Reddit: {
+        name: "Reddit",
+        url: "https://www.reddit.com/user/rajneesh807/",
+        icon: Icons.reddit,
+
+        navbar: true,
+      },
       email: {
         name: "Send Email",
         url: "#",
