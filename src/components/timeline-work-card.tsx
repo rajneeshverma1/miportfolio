@@ -10,7 +10,7 @@ interface TimelineWorkCardProps {
   title: string;
   period: string;
   description: string;
-  number: number;
+  number?: number;
   isLast?: boolean;
   specialBadge?: string;
   showWebsite?: boolean;
@@ -33,15 +33,17 @@ export const TimelineWorkCard = ({
   return (
     <div className="relative flex gap-3 sm:gap-4 md:gap-6 pb-6 sm:pb-8">
       {/* Timeline Line and Number */}
-      <div className="flex flex-col items-center flex-shrink-0">
+      <div className="flex flex-col items-center flex-shrink-0 w-9 sm:w-10 md:w-11">
         {/* Number Circle */}
-        <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full border-2 border-border/50 bg-background flex items-center justify-center relative z-10">
-          <span className="text-xs sm:text-sm font-semibold text-foreground">{number}</span>
-        </div>
+        {number && (
+          <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full border-2 border-border/50 bg-background flex items-center justify-center relative z-10">
+            <span className="text-xs sm:text-sm font-semibold text-foreground">{number}</span>
+          </div>
+        )}
         
         {/* Vertical Line */}
         {!isLast && (
-          <div className="w-0.5 flex-1 bg-border/50 mt-2"></div>
+          <div className={`w-0.5 flex-1 bg-border/50 ${number ? "mt-2" : "mt-0"}`}></div>
         )}
       </div>
 

@@ -106,7 +106,18 @@ export default async function Page() {
                   title={work.title}
                   period={`${work.start} - ${work.end ?? "Present"}`}
                   description={work.description}
-                  number={work.company === "myeasylearn" ? undefined : id + 1}
+                  number={
+                    work.title === "Software Engineer" && work.company === "myeasylearn"
+                      ? 1
+                      : work.title === "Software Engineer Intern" && work.company === "myeasylearn"
+                      ? undefined
+                      : DATA.work
+                          .slice(0, id)
+                          .filter(
+                            (w) =>
+                              !(w.company === "myeasylearn" && w.title === "Software Engineer Intern")
+                          ).length + 1
+                  }
                   isLast={id === DATA.work.length - 1}
                   specialBadge={(work as any).specialBadge}
                   isActive={work.end === null}

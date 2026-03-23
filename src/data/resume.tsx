@@ -76,9 +76,9 @@ export const DATA = {
       logoUrl: "/Myeasylearn.jpg",
       start: "April 2025",
       end: null,
-      specialBadge: "Currently building platform",
+      specialBadge: "Currently Building / Pre-Seed Round",
       description:
-        "Building scalable ed-tech platform for Africa. Architecting full-stack solutions with modern technologies, implementing DevOps best practices, and establishing CI/CD pipelines for rapid deployment.",
+        "Promoted to Software Engineer. Currently architecting full-stack solutions, implementing DevOps best practices, and establishing CI/CD pipelines for a scalable ed-tech platform for Africa.",
     },
     {
       company: "myeasylearn",
@@ -89,6 +89,7 @@ export const DATA = {
       logoUrl: "/Myeasylearn.jpg",
       start: "January 2025",
       end: "April 2025",
+      specialBadge: "Currently Building / Pre-Seed Round",
       description:
         "Contributed to the MyEasyLearn ed-tech platform by building product features, fixing bugs, and supporting full-stack development across the application.",
     },
