@@ -86,6 +86,36 @@ export default async function Page() {
           </div>
         </div>
       </section>
+      <section id="work">
+        <div className="space-y-8 sm:space-y-10 md:space-y-12 w-full pt-4 pb-8 sm:pb-10 md:pb-12">
+          <div className="max-w-2xl mx-auto">
+            <BlurFade delay={BLUR_FADE_DELAY * 5}>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">Work Experience</h2>
+            </BlurFade>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            {DATA.work.map((work, id) => (
+              <BlurFade
+                key={work.company}
+                delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+              >
+                <TimelineWorkCard
+                  company={work.company}
+                  href={work.href}
+                  location={work.location}
+                  title={work.title}
+                  period={`${work.start} - ${work.end ?? "Present"}`}
+                  description={work.description}
+                  number={work.company === "myeasylearn" ? undefined : id + 1}
+                  isLast={id === DATA.work.length - 1}
+                  specialBadge={(work as any).specialBadge}
+                  isActive={work.end === null}
+                />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="os-contributions" className="mt-8 sm:mt-10 md:mt-12">
         <div className="mx-auto w-full max-w-2xl">
           <div className="flex min-h-0 flex-col gap-y-3 sm:gap-y-4">
@@ -109,36 +139,6 @@ export default async function Page() {
                 </BlurFade>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="work">
-        <div className="space-y-8 sm:space-y-10 md:space-y-12 w-full pt-4 pb-8 sm:pb-10 md:pb-12">
-          <div className="max-w-2xl mx-auto">
-            <BlurFade delay={BLUR_FADE_DELAY * 5}>
-              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">Work Experience</h2>
-            </BlurFade>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            {DATA.work.map((work, id) => (
-              <BlurFade
-                key={work.company}
-                delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-              >
-                <TimelineWorkCard
-                  company={work.company}
-                  href={work.href}
-                  location={work.location}
-                  title={work.title}
-                  period={`${work.start} - ${work.end ?? "Present"}`}
-                  description={work.description}
-                  number={id + 1}
-                  isLast={id === DATA.work.length - 1}
-                  specialBadge={(work as any).specialBadge}
-                  isActive={work.end === null}
-                />
-              </BlurFade>
-            ))}
           </div>
         </div>
       </section>

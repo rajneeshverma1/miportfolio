@@ -72,18 +72,6 @@ export const DATA = {
       href: "https://myeasylearn.com",
       badges: [],
       location: "Remote, Africa",
-      title: "Software Engineer Intern",
-      logoUrl: "/Myeasylearn.jpg",
-      start: "January 2025",
-      end: "April 2025",
-      description:
-        "Contributed to the MyEasyLearn ed-tech platform by building product features, fixing bugs, and supporting full-stack development across the application.",
-    },
-    {
-      company: "myeasylearn",
-      href: "https://myeasylearn.com",
-      badges: [],
-      location: "Remote, Africa",
       title: "Software Engineer",
       logoUrl: "/Myeasylearn.jpg",
       start: "April 2025",
@@ -91,6 +79,18 @@ export const DATA = {
       specialBadge: "Currently building platform",
       description:
         "Building scalable ed-tech platform for Africa. Architecting full-stack solutions with modern technologies, implementing DevOps best practices, and establishing CI/CD pipelines for rapid deployment.",
+    },
+    {
+      company: "myeasylearn",
+      href: "https://myeasylearn.com",
+      badges: [],
+      location: "Remote, Africa",
+      title: "Software Engineer Intern",
+      logoUrl: "/Myeasylearn.jpg",
+      start: "January 2025",
+      end: "April 2025",
+      description:
+        "Contributed to the MyEasyLearn ed-tech platform by building product features, fixing bugs, and supporting full-stack development across the application.",
     },
     {
       company: "Fiverr",
