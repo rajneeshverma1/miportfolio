@@ -55,15 +55,6 @@ export default async function Page() {
                     </div>
                     <RealTimeClock />
                     <div className="flex items-center gap-1.5">
-                      <Link
-                        href="https://drive.google.com/file/d/1Vf5ghCo3irbSMk1dgsMcJuWHVVyXq-gZ/view?usp=drive_link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg bg-white border border-gray-300 text-[10px] sm:text-xs text-gray-900 hover:bg-gray-50 transition-colors"
-                      >
-                        <Icons.resume className="size-3 sm:size-3.5 flex-shrink-0" />
-                        <span>Resume</span>
-                      </Link>
                       <ModeToggle />
                     </div>
                   </div>

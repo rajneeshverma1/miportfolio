@@ -91,12 +91,14 @@ export function ProjectCard({
             <div className="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
               <CardTitle className="mt-1 text-sm sm:text-base text-white truncate">{title}</CardTitle>
               {badge && (
-                <span className={cn(
-                  "text-[8px] sm:text-[9px] font-medium px-1 sm:px-1.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0",
-                  badge === "Current" 
-                    ? "bg-green-500/20 text-green-400 border border-green-500/30" 
-                    : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                )}>
+                <span
+                  className={cn(
+                    "text-[8px] sm:text-[9px] font-medium px-1 sm:px-1.5 py-0.5 rounded-full whitespace-nowrap flex-shrink-0",
+                    badge === "Current" || badge === "Currently Building"
+                      ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                      : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                  )}
+                >
                   {badge}
                 </span>
               )}
