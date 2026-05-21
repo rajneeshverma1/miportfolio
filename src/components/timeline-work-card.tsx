@@ -31,6 +31,15 @@ export const TimelineWorkCard = ({
   showWebsite = true,
   isActive = false,
 }: TimelineWorkCardProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const shouldTruncate = description.length > 180;
+  const displayText = shouldTruncate && !isExpanded
+    ? (description.includes("\n")
+        ? description.split("\n")[0] + "..."
+        : description.slice(0, 150) + "...")
+    : description;
+
   return (
     <div className="relative flex gap-3 sm:gap-4 md:gap-6 pb-6 sm:pb-8">
       {/* Timeline Line and Number */}
