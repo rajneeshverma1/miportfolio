@@ -68,6 +68,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Sidekick (YC P26)",
+      href: "#",
+      badges: [],
+      location: "San Francisco, California, United States · Remote",
+      title: "Founding GT Engineer",
+      logoUrl: "",
+      start: "Apr 2026",
+      end: "Present",
+      description:
+        "Joined a YC W26 backed startup as a Founding Growth & Technical Engineer.\n• Working across Full-Stack Development, AI Engineering, and Growth Engineering to build and scale products from 0→1.\n• Building scalable frontend and backend systems while contributing to product architecture and performance optimization.\n• Developing AI-powered workflows, automations, and internal tools to improve product efficiency and user experience.\n• Collaborating closely with the founding team on product strategy, rapid experimentation, user acquisition, and growth systems.\n• Contributing across both technical execution and growth initiatives in a fast-paced, high-ownership startup environment.",
+    },
+    {
       company: "myeasylearn",
       href: "https://myeasylearn.com",
       badges: [],
