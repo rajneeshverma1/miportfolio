@@ -98,15 +98,13 @@ export default async function Page() {
                   period={`${work.start} - ${work.end ?? "Present"}`}
                   description={work.description}
                   number={
-                    work.title === "Software Engineer" && work.company === "myeasylearn"
-                      ? 1
-                      : work.title === "Software Engineer Intern" && work.company === "myeasylearn"
+                    (work as any).company === "Stealth AI Startup" && (work as any).title === "Software Engineer Intern"
                       ? undefined
                       : DATA.work
                           .slice(0, id)
                           .filter(
                             (w) =>
-                              !(w.company === "myeasylearn" && w.title === "Software Engineer Intern")
+                              !((w as any).company === "Stealth AI Startup" && (w as any).title === "Software Engineer Intern")
                           ).length + 1
                   }
                   isLast={id === DATA.work.length - 1}
