@@ -25,5 +25,5 @@ Built with Next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://
 
    npm install
 
-   npm run  dev
+   npm run dev
    ```
