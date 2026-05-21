@@ -21,8 +21,9 @@ Built with Next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://
    ```bash
    git clone https://github.com/curiousrajneesh27/Our-Portfolio-.git
 
-   cd Our-Portfolio-cd Our-Portfolio-
+   cd Our-Portfolio-
 
    npm install
 
    npm run  dev
+   ```
