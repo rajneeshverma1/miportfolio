@@ -84,7 +84,23 @@ export const TimelineWorkCard = ({
         <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">{location}</p>
 
         {/* Description */}
-        <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed mb-3 sm:mb-4">{description}</p>
+        <p 
+          onClick={() => shouldTruncate && setIsExpanded(!isExpanded)}
+          className={`text-xs sm:text-sm text-foreground/90 leading-relaxed ${
+            shouldTruncate ? "cursor-pointer select-none hover:text-foreground/80" : ""
+          } ${shouldTruncate && !isExpanded ? "mb-1" : "mb-3 sm:mb-4"} whitespace-pre-line`}
+        >
+          {displayText}
+        </p>
+
+        {shouldTruncate && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-xs font-semibold text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 hover:underline mb-3 sm:mb-4 focus:outline-none flex items-center gap-1"
+          >
+            {isExpanded ? "Show Less" : "Read More"}
+          </button>
+        )}
 
         {/* Buttons or Special Badge */}
         <div className="flex gap-2">
