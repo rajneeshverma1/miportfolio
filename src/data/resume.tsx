@@ -517,6 +517,7 @@ export const DATA = {
       video: "",
     },
   ],
+  // Flagship hackathons, coding competitions, and academic fests
   hackathons: [
     {
       title: "Technex - Sri Ramswaroop Memorial University",
