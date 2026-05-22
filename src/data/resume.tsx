@@ -547,16 +547,6 @@ export const DATA = {
         "/SIH2.webp",
       links: [],
     },
-    {
-      title: "Smart India Hackathon",
-      dates: "August 2024",
-      location: "India",
-      description:
-        "Participated in Smart India Hackathon 2024, working on innovative tech solutions for national-level challenges. Gained experience in rapid prototyping and team collaboration.",
-      image:
-        "/SIH2.webp",
-      links: [],
-    },
   ],
   osContributions: [
     {
