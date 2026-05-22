@@ -98,6 +98,7 @@ export default async function Page() {
                   period={`${work.start} - ${work.end ?? "Present"}`}
                   description={work.description}
                   number={
+                    // Exclude duplicate timeline numbers for internships within the same company
                     (work as any).company === "Stealth AI Startup" && (work as any).title === "Software Engineer Intern"
                       ? undefined
                       : DATA.work
