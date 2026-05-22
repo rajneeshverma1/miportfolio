@@ -519,6 +519,15 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "Technex - Sri Ramswaroop Memorial University",
+      dates: "March 2025",
+      location: "Lucknow, India",
+      description:
+        "Competed and triumphed in Technex, the premier annual technical fest at Sri Ramswaroop Memorial University, building state-of-the-art technical prototypes and presenting software solutions.",
+      image: "/SRMU.jpg",
+      links: [],
+    },
+    {
       title: "Coding Competition - Sri Ramswaroop Memorial University",
       dates: "September 2024",
       location: "Lucknow, India",
