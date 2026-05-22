@@ -519,6 +519,15 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "Coding Competition - Sri Ramswaroop Memorial University",
+      dates: "September 2024",
+      location: "Lucknow, India",
+      description:
+        "Secured 1st Position and Rank 1 in the university-wide Coding Competition at Sri Ramswaroop Memorial University, solving complex data structures and algorithmic challenges.",
+      image: "/SRMU.jpg",
+      links: [],
+    },
+    {
       title: "AI Hackathon - Chandigarh University",
       dates: "October 2025",
       location: "Chandigarh, India",
