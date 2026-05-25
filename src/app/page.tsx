@@ -54,6 +54,15 @@ export default async function Page() {
                       <span className="truncate">{DATA.location}</span>
                     </div>
                     <RealTimeClock />
+                    <Link
+                      href="https://drive.google.com/file/d/1YD8F9MVf9ZUtuhUa3ZwHPyLfEUXFGv_2/view?usp=share_link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg bg-white border border-gray-300 text-[10px] sm:text-xs text-gray-900 hover:bg-gray-50 transition-colors"
+                    >
+                      <Icons.resume className="size-3 sm:size-3.5 flex-shrink-0" />
+                      <span>Resume</span>
+                    </Link>
                     <div className="flex items-center gap-1.5">
                       <ModeToggle />
                     </div>
