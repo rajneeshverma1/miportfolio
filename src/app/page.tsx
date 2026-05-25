@@ -220,7 +220,7 @@ export default async function Page() {
               <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">Hackathons and Competitions</h2>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 15}>
-              <ul className="mb-4 divide-y divide-dashed">
+              <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
                 {DATA.hackathons.map((project, id) => (
                   <BlurFade
                     key={project.title + project.dates}
