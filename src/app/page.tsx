@@ -43,7 +43,7 @@ export default async function Page() {
 
                 <BlurFade delay={BLUR_FADE_DELAY * 2}>
                   <p className="text-xs sm:text-sm text-muted-foreground">
-                    19 y/o tech enthusiast, OS contributor, hobbyist developer and tinkerer.
+                    20 y/o tech enthusiast, OS contributor, hobbyist developer and tinkerer.
                   </p>
                 </BlurFade>
 

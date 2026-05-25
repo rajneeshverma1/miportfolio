@@ -74,7 +74,7 @@ export const DATA = {
       location: "San Francisco, California, United States · Remote",
       title: "Founding GT Engineer",
       logoUrl: "",
-      start: "Apr 2026",
+      start: "May 2026",
       end: "Present",
       description:
         "Joined a YC W26 backed startup as a Founding Growth & Technical Engineer.\n• Working across Full-Stack Development, AI Engineering, and Growth Engineering to build and scale products from 0→1.\n• Building scalable frontend and backend systems while contributing to product architecture and performance optimization.\n• Developing AI-powered workflows, automations, and internal tools to improve product efficiency and user experience.\n• Collaborating closely with the founding team on product strategy, rapid experimentation, user acquisition, and growth systems.\n• Contributing across both technical execution and growth initiatives in a fast-paced, high-ownership startup environment.",
@@ -86,7 +86,7 @@ export const DATA = {
       location: "South Africa · Remote",
       title: "Software Engineer",
       logoUrl: "",
-      start: "Apr 2025",
+      start: "Mar 2025",
       end: "May 2026",
       description:
         "• Scaled the edtech platform to support 500+ concurrent users, optimizing backend services and real-time systems for low latency and high reliability.\n• Engineered a live video lecture system for real-time classes, ensuring smooth streaming and interaction.\n• Built a video upload & content management pipeline to support recorded lectures and on-demand learning.\n• Developed advanced edtech features like interactive chat, engagement tools, and progress tracking, improving user retention.\n• Designed and implemented a premium subscription model with feature gating to enable monetization and unlock advanced features.\n• Took end-to-end ownership in a zero-to-one startup environment, collaborating with product/design to rapidly build, iterate, and launch features used by real users.",
@@ -99,7 +99,7 @@ export const DATA = {
       title: "Software Engineer Intern",
       logoUrl: "",
       start: "Jan 2025",
-      end: "Apr 2025",
+      end: "Mar 2025",
       description:
         "• Built and shipped scalable full-stack features, including backend APIs and real-time workflows to support multi-user live learning sessions.\n• Engineered a live video lecture system and implemented a video upload & management pipeline for recorded content delivery.\n• Designed and implemented a premium subscription model with feature gating to drive monetization and unlock advanced features.\n• Took end-to-end ownership in a zero-to-one startup environment, collaborating with product/design to improve performance, reliability, and user experience.",
     },
