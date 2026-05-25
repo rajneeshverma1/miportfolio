@@ -68,7 +68,7 @@ export default async function Page() {
                     src={DATA.avatarUrl}
                     alt={DATA.name}
                     fill
-                    className="object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer object-[center_30%] scale-[1.2]"
+                    className="object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer object-[center_30%]"
                     priority
                   />
                 </div>
