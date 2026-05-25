@@ -49,16 +49,16 @@ export default async function Page() {
 
                 <BlurFade delay={BLUR_FADE_DELAY * 3}>
                   <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                    <div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg bg-white border border-gray-300 text-[10px] sm:text-xs text-gray-900">
+                    <div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg bg-background border border-border text-[10px] sm:text-xs text-foreground">
                       <Icons.globe className="size-3 sm:size-3.5 flex-shrink-0" />
                       <span className="truncate">{DATA.location}</span>
                     </div>
                     <RealTimeClock />
                     <Link
-                      href="https://drive.google.com/file/d/1YD8F9MVf9ZUtuhUa3ZwHPyLfEUXFGv_2/view?usp=share_link"
+                      href="https://drive.google.com/file/d/1H7cllt3El3tMv0RrLncnnoUuTMk-aCSf/view?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg bg-white border border-gray-300 text-[10px] sm:text-xs text-gray-900 hover:bg-gray-50 transition-colors"
+                      className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg bg-background border border-border text-[10px] sm:text-xs text-foreground hover:bg-accent transition-colors"
                     >
                       <Icons.resume className="size-3 sm:size-3.5 flex-shrink-0" />
                       <span>Resume</span>
