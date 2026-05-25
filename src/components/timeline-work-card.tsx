@@ -57,6 +57,9 @@ export const TimelineWorkCard = ({
               </div>
             )}
           </div>
+          {company === "Stealth AI Startup" && (
+            <span className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">{period}</span>
+          )}
         </div>
 
         {/* Job Title Badge */}
