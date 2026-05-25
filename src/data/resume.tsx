@@ -11,7 +11,7 @@ export const DATA = {
     "Building AI-powered & Full Stack apps with DevOps that make an impact.",
   summary:
     "Hey! I'm Rajneesh, a Full Stack & DevOps Engineer specializing in building scalable web applications and cloud infrastructure. I work with modern technologies like React, Node.js, Docker, and Kubernetes to create production-ready systems. Currently focused on CI/CD pipelines, containerization, and deploying SaaS products that drive real impact.",
-  avatarUrl: "/Profile2.jpeg",
+  avatarUrl: "/Profile3.png",
   skills: {
     Frontend: ["React", "Next.js", "TailwindCSS", "Aceternity UI", "ShadCN UI", "Tanstack Query", "Redux"],
     "Javascript runtime": ["Node.js", "pnpm", "Bun", "Edge runtime (Vercel)", "CF Worker"],

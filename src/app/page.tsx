@@ -63,7 +63,7 @@ export default async function Page() {
 
               {/* Right Column: Profile Image */}
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <div className="relative size-20 sm:size-24 md:size-28 rounded-full overflow-hidden border-2 border-border flex-shrink-0">
+                <div className="relative size-20 sm:size-24 md:size-28 rounded-full overflow-hidden border-2 border-border flex-shrink-0 bg-muted/60">
                   <Image
                     src={DATA.avatarUrl}
                     alt={DATA.name}
