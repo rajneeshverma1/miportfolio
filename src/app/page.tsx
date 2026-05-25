@@ -213,9 +213,69 @@ export default async function Page() {
           blurFadeDelay={BLUR_FADE_DELAY * 13}
         />
       </section>
+      <section id="hackathons">
+        <div className="mx-auto w-full max-w-2xl">
+          <div className="space-y-8 sm:space-y-10 md:space-y-12 w-full py-8 sm:py-10 md:py-12">
+            <BlurFade delay={BLUR_FADE_DELAY * 14}>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">Hackathons and Competitions</h2>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 15}>
+              <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+                {DATA.hackathons.map((project, id) => (
+                  <BlurFade
+                    key={project.title + project.dates}
+                    delay={BLUR_FADE_DELAY * 16 + id * 0.05}
+                  >
+                    <HackathonCard
+                      title={project.title}
+                      description={project.description}
+                      location={project.location}
+                      dates={project.dates}
+                      image={project.image}
+                      links={project.links}
+                    />
+                  </BlurFade>
+                ))}
+              </ul>
+            </BlurFade>
+          </div>
+        </div>
+      </section>
+      <section id="github-contributions" className="w-full py-8 sm:py-10 md:py-12">
+        <div className="max-w-2xl mx-auto space-y-6 sm:space-y-7 md:space-y-8">
+          <BlurFade delay={BLUR_FADE_DELAY * 17}>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">GitHub Contributions</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 18}>
+            <div className="space-y-2">
+              <Image
+                src="https://ghchart.rshah.org/10b981/rajneeshverma1"
+                alt="GitHub Contribution Chart"
+                width={800}
+                height={200}
+                className="w-full rounded-lg dark:invert dark:hue-rotate-180"
+                unoptimized
+              />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs sm:text-sm text-muted-foreground px-2 gap-2 sm:gap-0">
+                <span>481 contributions in the last year</span>
+                <div className="flex items-center gap-1">
+                  <span className="text-xs">Less</span>
+                  <div className="flex gap-1">
+                    <div className="w-3 h-3 rounded-sm bg-emerald-200"></div>
+                    <div className="w-3 h-3 rounded-sm bg-emerald-400"></div>
+                    <div className="w-3 h-3 rounded-sm bg-emerald-600"></div>
+                    <div className="w-3 h-3 rounded-sm bg-emerald-800"></div>
+                  </div>
+                  <span className="text-xs">More</span>
+                </div>
+              </div>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
       <section id="articles" className="w-full py-8 sm:py-10 md:py-12">
         <div className="max-w-2xl mx-auto space-y-6 sm:space-y-7 md:space-y-8">
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+          <BlurFade delay={BLUR_FADE_DELAY * 19}>
             <div>
               <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">My thoughts on ... everything</h2>
               <p className="text-xs sm:text-sm text-muted-foreground mt-2">
@@ -237,7 +297,7 @@ export default async function Page() {
               })
               .slice(0, 3)
               .map((post, id) => (
-                <BlurFade key={post.slug} delay={BLUR_FADE_DELAY * 14.5 + id * 0.05}>
+                <BlurFade key={post.slug} delay={BLUR_FADE_DELAY * 19.5 + id * 0.05}>
                   <Link
                     href={`/blog/${post.slug}`}
                     className="block group"
@@ -276,69 +336,9 @@ export default async function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
-        <div className="mx-auto w-full max-w-2xl">
-          <div className="space-y-8 sm:space-y-10 md:space-y-12 w-full py-8 sm:py-10 md:py-12">
-            <BlurFade delay={BLUR_FADE_DELAY * 15}>
-              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">Hackathons and Competitions</h2>
-            </BlurFade>
-            <BlurFade delay={BLUR_FADE_DELAY * 16}>
-              <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-                {DATA.hackathons.map((project, id) => (
-                  <BlurFade
-                    key={project.title + project.dates}
-                    delay={BLUR_FADE_DELAY * 17 + id * 0.05}
-                  >
-                    <HackathonCard
-                      title={project.title}
-                      description={project.description}
-                      location={project.location}
-                      dates={project.dates}
-                      image={project.image}
-                      links={project.links}
-                    />
-                  </BlurFade>
-                ))}
-              </ul>
-            </BlurFade>
-          </div>
-        </div>
-      </section>
-      <section id="github-contributions" className="w-full py-8 sm:py-10 md:py-12">
-        <div className="max-w-2xl mx-auto space-y-6 sm:space-y-7 md:space-y-8">
-          <BlurFade delay={BLUR_FADE_DELAY * 18}>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">GitHub Contributions</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 19}>
-            <div className="space-y-2">
-              <Image
-                src="https://ghchart.rshah.org/10b981/rajneeshverma1"
-                alt="GitHub Contribution Chart"
-                width={800}
-                height={200}
-                className="w-full rounded-lg dark:invert dark:hue-rotate-180"
-                unoptimized
-              />
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs sm:text-sm text-muted-foreground px-2 gap-2 sm:gap-0">
-                <span>481 contributions in the last year</span>
-                <div className="flex items-center gap-1">
-                  <span className="text-xs">Less</span>
-                  <div className="flex gap-1">
-                    <div className="w-3 h-3 rounded-sm bg-emerald-200"></div>
-                    <div className="w-3 h-3 rounded-sm bg-emerald-400"></div>
-                    <div className="w-3 h-3 rounded-sm bg-emerald-600"></div>
-                    <div className="w-3 h-3 rounded-sm bg-emerald-800"></div>
-                  </div>
-                  <span className="text-xs">More</span>
-                </div>
-              </div>
-            </div>
-          </BlurFade>
-        </div>
-      </section>
       <section id="contact" className="w-full py-8 sm:py-10 md:py-12">
         <div className="max-w-2xl mx-auto space-y-6 sm:space-y-7 md:space-y-8">
-          <BlurFade delay={BLUR_FADE_DELAY * 19.5}>
+          <BlurFade delay={BLUR_FADE_DELAY * 20.5}>
             <div>
               <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tighter">Hook with me</h2>
               <p className="text-xs sm:text-sm text-muted-foreground mt-2 leading-relaxed">
@@ -372,22 +372,22 @@ export default async function Page() {
           </BlurFade>
         </div>
       </section>
-      <BlurFade delay={BLUR_FADE_DELAY * 20}>
+      <BlurFade delay={BLUR_FADE_DELAY * 21}>
         <QuoteSection />
       </BlurFade>
       <footer className="border-t">
         <div className="max-w-2xl mx-auto flex flex-col items-center gap-3 sm:gap-4 py-6 sm:py-8 px-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 21}>
+          <BlurFade delay={BLUR_FADE_DELAY * 22}>
             <p className="text-xs sm:text-sm text-muted-foreground text-center">
               Design & Developed by <span className="font-semibold text-foreground">Rajneesh</span>
             </p>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 22}>
+          <BlurFade delay={BLUR_FADE_DELAY * 23}>
             <p className="text-xs sm:text-sm text-muted-foreground text-center">
               © 2026. All rights reserved.
             </p>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 23}>
+          <BlurFade delay={BLUR_FADE_DELAY * 24}>
             <div className="flex items-center gap-3 sm:gap-4">
               {Object.entries(DATA.contact.social)
                 .filter(([_, social]) => social.navbar)
