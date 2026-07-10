@@ -89,7 +89,7 @@ export function ProjectCard({
         <div className="space-y-1">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
-              <CardTitle className="mt-1 text-sm sm:text-base text-white truncate">{title}</CardTitle>
+              <CardTitle className="mt-1 text-sm sm:text-base truncate">{title}</CardTitle>
               {badge && (
                 <span
                   className={cn(
@@ -109,18 +109,18 @@ export function ProjectCard({
               </span>
             )}
           </div>
-          <time className="font-sans text-[10px] sm:text-xs text-white">{dates}</time>
+          <time className="font-sans text-[10px] sm:text-xs text-muted-foreground">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <div className="text-[10px] sm:text-xs text-white">
-            <Markdown className="prose max-w-full text-pretty font-sans text-[10px] sm:text-xs text-white dark:prose-invert">
+          <div className="text-[10px] sm:text-xs text-muted-foreground">
+            <Markdown className="prose max-w-full text-pretty font-sans text-[10px] sm:text-xs text-muted-foreground dark:prose-invert">
               {showFullDescription ? description : description.split('.')[0] + '.'}
             </Markdown>
             {description.split('.').length > 2 && (
               <button
                 onClick={() => setShowFullDescription(!showFullDescription)}
-                className="text-white/70 hover:text-white text-[9px] sm:text-[10px] ml-1 underline"
+                className="text-muted-foreground/70 hover:text-foreground text-[9px] sm:text-[10px] ml-1 underline"
               >
                 {showFullDescription ? "less" : "more"}
               </button>

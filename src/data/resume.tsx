@@ -83,6 +83,17 @@ export const DATA = {
 • Contributing across both technical execution and growth initiatives in a fast-paced, high-ownership startup environment.`,
     },
     {
+      company: "Flyrank AI",
+      href: "#",
+      badges: [],
+      location: "Remote",
+      title: "Backend AI Engineer",
+      logoUrl: "",
+      start: "Jul 2026",
+      end: "Present",
+      description: `Building and shipping AI backend systems at FlyRank AI - working on LLM integrations, APIs, automation pipelines, and scalable infrastructure.`,
+    },
+    {
       company: "Stealth AI Startup",
       href: "#",
       badges: [],
@@ -158,10 +169,10 @@ export const DATA = {
   projects: [
     {
       title: "Lumify",
-      href: "#",
+      href: "https://lumify-axdo.vercel.app",
       dates: "",
       active: true,
-      description: `Description goes here. I will provide github and live link later.`,
+      description: `Transform your code and screenshots into stunning visuals with Lumify`,
       technologies: [
         "Next.js",
         "React",
@@ -171,21 +182,21 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "#",
+          href: "https://github.com/rajneeshverma1/Lumify",
           icon: <Icons.github className="size-3" />,
         },
         {
           type: "Website",
-          href: "#",
+          href: "https://lumify-axdo.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/Lumify.png",
       video: "",
     },
     {
       title: "Matic AI (SAAS)",
-      href: "https://matic-rho.vercel.app/",
+      href: "https://maticstudio.site",
       dates: "",
       active: true,
       description: `A text-to-educational-animation engine that converts structured content into animated learning sequences. Features content parsing, scene mapping, and timeline orchestration for AI-assisted educational content.`,
@@ -205,39 +216,39 @@ export const DATA = {
         },
         {
           type: "Website",
-          href: "https://matic-rho.vercel.app/",
+          href: "https://maticstudio.site",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/maticai.png",
+      image: "/Maticai.png",
       video: "",
     },
     {
       title: "Drafty AI",
-      href: "#",
+      href: "https://creo.hrsht.me",
       dates: "",
       active: true,
-      description: `AI-powered platform.`,
+      description: `Drafty is a high-performance, real-time collaborative white boarding application. The goal of this project was to explore the challenges of synchronizing complex, mutable state across multiple clients with minimal latency, while pushing the boundaries of what can be rendered smoothly in the browser.`,
       technologies: [
         "Next.js",
         "TypeScript",
         "React",
         "Node.js",
-        "AI",
+        "WebSockets",
       ],
       links: [
         {
           type: "GitHub",
-          href: "#",
+          href: "https://github.com/rajneeshverma1/Drafty",
           icon: <Icons.github className="size-3" />,
         },
         {
           type: "Website",
-          href: "#",
+          href: "https://creo.hrsht.me",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/Drafty.png",
       video: "",
     },
     {
@@ -256,11 +267,11 @@ export const DATA = {
       links: [
         {
           type: "GitHub",
-          href: "#",
+          href: "https://github.com/rajneeshverma1/Docly-AI",
           icon: <Icons.github className="size-3" />,
         },
         {
-          type: "Website",
+          type: "Live Link Soon",
           href: "#",
           icon: <Icons.globe className="size-3" />,
         },
@@ -311,56 +322,7 @@ export const DATA = {
       image: "/collectly.png",
       video: "",
     },
-    {
-      title: "Blitzquiz",
-      href: "#",
-      dates: "",
-      active: true,
-      description: `A full-stack coding competition platform with contest creation, problem handling, and user participation flows. Built with Next.js and TypeScript for speed and scalability.`,
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "PostgreSQL",
-        "Prisma",
-        "Tailwind CSS",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/rajneeshverma1/blitzquiz",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/Blitzquiz.png",
-      video: "",
-    },
-    {
-      title: "DevTinder",
-      href: "#",
-      dates: "Jul 2025 - Present",
-      active: true,
-      description: `A networking platform for developers to connect and collaborate with profile matching and real-time chat. Features skill-based connections and project collaboration tools with modern full-stack technologies.`,
-      technologies: [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Socket.io",
-        "Redux",
-        "Tailwind CSS",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "#",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/Devtinder.png",
-      video: "",
-    },
+
     {
       title: "Netflix GPT",
       href: "#",
@@ -386,37 +348,7 @@ export const DATA = {
       image: "/Netlfix.png",
       video: "",
     },
-    {
-      title: "DevTube",
-      href: "https://dev-tube.vercel.app/",
-      dates: "Mar 2025 - May 2025",
-      active: true,
-      description: `A modern video sharing platform built for developers to upload, stream, and share technical content. Features comments, likes, subscriptions, and responsive UI optimized for code tutorials and tech videos.`,
-      technologies: [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Redux Toolkit",
-        "Tailwind CSS",
-        "Cloudinary",
-        "JWT",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "#",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Live",
-          href: "https://dev-tube.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/Devtube.png",
-      video: "",
-    },
+
   ],
   clientProjects: [
     {

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import SplashCursor from "@/components/SplashCursor";
+import CursorRabbit from "@/components/cursor-rabbit";
 import "./globals.css";
 
 const fontSans = Poppins({
@@ -64,6 +65,7 @@ export default function RootLayout({
         )}
       >
         <SplashCursor />
+        <CursorRabbit />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <TooltipProvider delayDuration={0}>
             <div className="relative z-10">

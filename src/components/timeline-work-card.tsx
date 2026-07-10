@@ -41,7 +41,7 @@ export const TimelineWorkCard = ({
     : description;
 
   return (
-    <div className="relative flex gap-3 sm:gap-4 md:gap-6 pb-6 sm:pb-8">
+    <div className="relative flex gap-3 sm:gap-4 md:gap-6 pb-3 sm:pb-4">
       {/* Timeline Line and Number */}
       <div className="flex flex-col items-center flex-shrink-0 w-9 sm:w-10 md:w-11">
         {/* Number Circle */}
@@ -58,8 +58,8 @@ export const TimelineWorkCard = ({
       </div>
 
       {/* Content */}
-      <div className="flex-grow pt-1 pb-3 sm:pb-4">
-        <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-4 mb-2">
+      <div className="flex-grow pt-0 pb-1 sm:pb-2">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-2 mb-1 sm:mb-1.5">
           <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
             <h3 className="text-base sm:text-lg font-bold text-foreground">{company}</h3>
             {isActive && (
@@ -76,19 +76,19 @@ export const TimelineWorkCard = ({
         </div>
 
         {/* Job Title Badge */}
-        <div className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 rounded-md bg-muted/50 border border-border/50 mb-2">
+        <div className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 rounded-md bg-muted/50 border border-border/50 mb-1">
           <span className="text-[10px] sm:text-xs font-medium text-foreground">{title}</span>
         </div>
 
         {/* Location */}
-        <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">{location}</p>
+        <p className="text-[10px] sm:text-xs text-muted-foreground mb-1.5 sm:mb-2">{location}</p>
 
         {/* Description */}
         <p 
           onClick={() => shouldTruncate && setIsExpanded(!isExpanded)}
-          className={`text-xs sm:text-sm text-foreground/90 leading-relaxed ${
+          className={`text-[11px] sm:text-[13px] text-foreground/90 leading-tight sm:leading-snug ${
             shouldTruncate ? "cursor-pointer select-none hover:text-foreground/80" : ""
-          } ${shouldTruncate && !isExpanded ? "mb-1" : "mb-3 sm:mb-4"} whitespace-pre-line`}
+          } ${shouldTruncate && !isExpanded ? "mb-0.5" : "mb-1.5 sm:mb-2"} whitespace-pre-line`}
         >
           {displayText}
         </p>
@@ -96,7 +96,7 @@ export const TimelineWorkCard = ({
         {shouldTruncate && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-xs font-semibold text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 hover:underline mb-3 sm:mb-4 focus:outline-none flex items-center gap-1"
+            className="text-xs font-semibold text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 hover:underline mb-2 sm:mb-3 focus:outline-none flex items-center gap-1"
           >
             {isExpanded ? "Show Less" : "Read More"}
           </button>
@@ -125,7 +125,7 @@ export const TimelineWorkCard = ({
 
         {/* Dotted separator line */}
         {!isLast && (
-          <div className="mt-4 sm:mt-6 border-b border-dashed border-border/50"></div>
+          <div className="mt-2 sm:mt-3 border-b border-dashed border-border/50"></div>
         )}
       </div>
     </div>
