@@ -7,11 +7,10 @@ export const DATA = {
   url: "https://curiousrajneesh.vercel.app",
   location: "Lucknow, India",
   locationLink: "https://www.google.com/maps/place/Lucknow",
-  description:
-    "Building AI-powered & Full Stack apps with DevOps that make an impact.",
+  description: `Building AI-powered & Full Stack apps with DevOps that make an impact.`,
   summary:
     "Hey! I'm Rajneesh, a Full Stack & DevOps Engineer specializing in building scalable web applications and cloud infrastructure. I work with modern technologies like React, Node.js, Docker, and Kubernetes to create production-ready systems. Currently focused on CI/CD pipelines, containerization, and deploying SaaS products that drive real impact.",
-  avatarUrl: "/Profile2.jpeg",
+  avatarUrl: "/profile1.jpeg",
   skills: {
     Frontend: ["React", "Next.js", "TailwindCSS", "Aceternity UI", "ShadCN UI", "Tanstack Query", "Redux"],
     "Javascript runtime": ["Node.js", "pnpm", "Bun", "Edge runtime (Vercel)", "CF Worker"],
@@ -76,8 +75,12 @@ export const DATA = {
       logoUrl: "",
       start: "May 2026",
       end: "Present",
-      description:
-        "Joined a YC W26 backed startup as a Founding Growth & Technical Engineer.\n• Working across Full-Stack Development, AI Engineering, and Growth Engineering to build and scale products from 0→1.\n• Building scalable frontend and backend systems while contributing to product architecture and performance optimization.\n• Developing AI-powered workflows, automations, and internal tools to improve product efficiency and user experience.\n• Collaborating closely with the founding team on product strategy, rapid experimentation, user acquisition, and growth systems.\n• Contributing across both technical execution and growth initiatives in a fast-paced, high-ownership startup environment.",
+      description: `Joined a YC W26 backed startup as a Founding Growth & Technical Engineer.
+• Working across Full-Stack Development, AI Engineering, and Growth Engineering to build and scale products from 0→1.
+• Building scalable frontend and backend systems while contributing to product architecture and performance optimization.
+• Developing AI-powered workflows, automations, and internal tools to improve product efficiency and user experience.
+• Collaborating closely with the founding team on product strategy, rapid experimentation, user acquisition, and growth systems.
+• Contributing across both technical execution and growth initiatives in a fast-paced, high-ownership startup environment.`,
     },
     {
       company: "Stealth AI Startup",
@@ -88,8 +91,12 @@ export const DATA = {
       logoUrl: "",
       start: "Mar 2025",
       end: "May 2026",
-      description:
-        "• Scaled the edtech platform to support 500+ concurrent users, optimizing backend services and real-time systems for low latency and high reliability.\n• Engineered a live video lecture system for real-time classes, ensuring smooth streaming and interaction.\n• Built a video upload & content management pipeline to support recorded lectures and on-demand learning.\n• Developed advanced edtech features like interactive chat, engagement tools, and progress tracking, improving user retention.\n• Designed and implemented a premium subscription model with feature gating to enable monetization and unlock advanced features.\n• Took end-to-end ownership in a zero-to-one startup environment, collaborating with product/design to rapidly build, iterate, and launch features used by real users.",
+      description: `• Scaled the edtech platform to support 500+ concurrent users, optimizing backend services and real-time systems for low latency and high reliability.
+• Engineered a live video lecture system for real-time classes, ensuring smooth streaming and interaction.
+• Built a video upload & content management pipeline to support recorded lectures and on-demand learning.
+• Developed advanced edtech features like interactive chat, engagement tools, and progress tracking, improving user retention.
+• Designed and implemented a premium subscription model with feature gating to enable monetization and unlock advanced features.
+• Took end-to-end ownership in a zero-to-one startup environment, collaborating with product/design to rapidly build, iterate, and launch features used by real users.`,
     },
     {
       company: "Stealth AI Startup",
@@ -100,8 +107,10 @@ export const DATA = {
       logoUrl: "",
       start: "Jan 2025",
       end: "Mar 2025",
-      description:
-        "• Built and shipped scalable full-stack features, including backend APIs and real-time workflows to support multi-user live learning sessions.\n• Engineered a live video lecture system and implemented a video upload & management pipeline for recorded content delivery.\n• Designed and implemented a premium subscription model with feature gating to drive monetization and unlock advanced features.\n• Took end-to-end ownership in a zero-to-one startup environment, collaborating with product/design to improve performance, reliability, and user experience.",
+      description: `• Built and shipped scalable full-stack features, including backend APIs and real-time workflows to support multi-user live learning sessions.
+• Engineered a live video lecture system and implemented a video upload & management pipeline for recorded content delivery.
+• Designed and implemented a premium subscription model with feature gating to drive monetization and unlock advanced features.
+• Took end-to-end ownership in a zero-to-one startup environment, collaborating with product/design to improve performance, reliability, and user experience.`,
     },
     {
       company: "Software Engineer (Contract) - US Based startup",
@@ -112,8 +121,7 @@ export const DATA = {
       logoUrl: "",
       start: "May 2024",
       end: "December 2024",
-      description:
-        "Delivered full-stack solutions for diverse clients. Built responsive web applications using React, Node.js, and MongoDB. Implemented RESTful APIs, integrated third-party services, and optimized application performance for production environments.",
+      description: `Delivered full-stack solutions for diverse clients. Built responsive web applications using React, Node.js, and MongoDB. Implemented RESTful APIs, integrated third-party services, and optimized application performance for production environments.`,
     },
     {
       company: "Software Engineer (Freelancer) - Mumbai based real state startup",
@@ -124,8 +132,7 @@ export const DATA = {
       logoUrl: "",
       start: "March 2024",
       end: "May 2024",
-      description:
-        "Specialized in backend development and API design. Built scalable server-side applications with Node.js and Express, designed database schemas for MongoDB and PostgreSQL, and implemented secure authentication and authorization systems.",
+      description: `Specialized in backend development and API design. Built scalable server-side applications with Node.js and Express, designed database schemas for MongoDB and PostgreSQL, and implemented secure authentication and authorization systems.`,
     },
   ],
   education: [
@@ -150,12 +157,123 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Lumify",
+      href: "#",
+      dates: "",
+      active: true,
+      description: `Description goes here. I will provide github and live link later.`,
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "#",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "#",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Matic AI (SAAS)",
+      href: "https://matic-rho.vercel.app/",
+      dates: "",
+      active: true,
+      description: `A text-to-educational-animation engine that converts structured content into animated learning sequences. Features content parsing, scene mapping, and timeline orchestration for AI-assisted educational content.`,
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "OpenAI API",
+        "Canvas API",
+        "Framer Motion",
+        "Node.js",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/rajneeshverma1/main-maticai",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "https://matic-rho.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/maticai.png",
+      video: "",
+    },
+    {
+      title: "Drafty AI",
+      href: "#",
+      dates: "",
+      active: true,
+      description: `AI-powered platform.`,
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "AI",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "#",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "#",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Docly AI",
+      href: "#",
+      dates: "",
+      active: true,
+      description: `Chat with your documents. Upload any PDF and get instant, cited answers powered by Groq + Jina AI.`,
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Groq",
+        "Jina AI",
+        "React",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "#",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "#",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/Doclyai.png",
+      video: "",
+    },
+    {
       title: "Collectly (SAAS)",
       href: "https://collectly-kappa.vercel.app/",
       dates: "",
       active: true,
-      description:
-        "A high-fidelity SaaS landing page for B2B billing automation with premium aesthetics and cinematic animations. Built with focus on pixel-perfect responsiveness showcasing AI-powered financial workflows.",
+      description: `A high-fidelity SaaS landing page for B2B billing automation with premium aesthetics and cinematic animations. Built with focus on pixel-perfect responsiveness showcasing AI-powered financial workflows.`,
       technologies: [
         "Next.js 15",
         "TypeScript",
@@ -194,155 +312,11 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Matic AI (SAAS)",
-      href: "https://matic-rho.vercel.app/",
-      dates: "",
-      active: true,
-      description:
-        "A text-to-educational-animation engine that converts structured content into animated learning sequences. Features content parsing, scene mapping, and timeline orchestration for AI-assisted educational content.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "OpenAI API",
-        "Canvas API",
-        "Framer Motion",
-        "Node.js",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/rajneeshverma1/main-maticai",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Website",
-          href: "https://matic-rho.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/maticai.png",
-      video: "",
-    },
-    {
-      title: "InventoryAI",
-      href: "https://lnkd.in/grn_BWqZ",
-      dates: "",
-      active: true,
-      description:
-        "AI-powered inventory management system for retail stores that goes beyond tracking—it decides. Predicts when products run out, suggests exact reorder quantities based on sales velocity, spots dead stock early, flags fast-movers, and includes an AI assistant for instant queries. Built to help store owners make data-driven decisions instead of guesses, preventing stockouts and freeing up cash trapped in dead inventory.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "Express",
-        "AI/ML",
-        "OpenAI API",
-        "PostgreSQL",
-        "Prisma",
-        "Tailwind CSS",
-        "Predictive Analytics",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/rajneeshverma1/InventoryAI",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Website",
-          href: "https://lnkd.in/grn_BWqZ",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/inventry.png",
-      video: "",
-    },
-    {
-      title: "Sketch Flow",
-      href: "#",
-      dates: "",
-      active: true,
-      description:
-        "A scalable real-time drawing platform with multiplayer canvas synchronization and optimized rendering. Designed for performance, collaboration, and extensibility.",
-      technologies: [
-        "React",
-        "WebSocket",
-        "Canvas API",
-        "Node.js",
-        "Redis",
-        "TypeScript",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/rajneeshverma1/Sketch-flow",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/Sketchflow.png",
-      video: "",
-    },
-    {
-      title: "Docly AI",
-      href: "#",
-      dates: "",
-      active: true,
-      description:
-        "Chat with your documents. Upload any PDF and get instant, cited answers powered by Groq + Jina AI.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Groq",
-        "Jina AI",
-        "React",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "#",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Website",
-          href: "#",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/Doclyai.png",
-      video: "",
-    },
-    {
-      title: "Bridgy AI",
-      href: "#",
-      dates: "",
-      active: true,
-      badge: "Currently Building",
-      description:
-        "An open-source workflow automation platform that lets you connect APIs, services, and applications together with ease. It enables developers and teams to build, automate, and scale workflows using a simple visual interface and powerful backend engine.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "React",
-        "Node.js",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "#",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
       title: "Blitzquiz",
       href: "#",
       dates: "",
       active: true,
-      description:
-        "A full-stack coding competition platform with contest creation, problem handling, and user participation flows. Built with Next.js and TypeScript for speed and scalability.",
+      description: `A full-stack coding competition platform with contest creation, problem handling, and user participation flows. Built with Next.js and TypeScript for speed and scalability.`,
       technologies: [
         "Next.js",
         "TypeScript",
@@ -367,8 +341,7 @@ export const DATA = {
       href: "#",
       dates: "Jul 2025 - Present",
       active: true,
-      description:
-        "A networking platform for developers to connect and collaborate with profile matching and real-time chat. Features skill-based connections and project collaboration tools with modern full-stack technologies.",
+      description: `A networking platform for developers to connect and collaborate with profile matching and real-time chat. Features skill-based connections and project collaboration tools with modern full-stack technologies.`,
       technologies: [
         "React",
         "Node.js",
@@ -393,8 +366,7 @@ export const DATA = {
       href: "#",
       dates: "Dec 2024 - Jan 2025",
       active: true,
-      description:
-        "An AI-powered Netflix clone with intelligent movie recommendations and GPT-powered search. Features personalized content suggestions with modern streaming interface built with React and TMDB API.",
+      description: `An AI-powered Netflix clone with intelligent movie recommendations and GPT-powered search. Features personalized content suggestions with modern streaming interface built with React and TMDB API.`,
       technologies: [
         "React",
         "Redux",
@@ -419,8 +391,7 @@ export const DATA = {
       href: "https://dev-tube.vercel.app/",
       dates: "Mar 2025 - May 2025",
       active: true,
-      description:
-        "A modern video sharing platform built for developers to upload, stream, and share technical content. Features comments, likes, subscriptions, and responsive UI optimized for code tutorials and tech videos.",
+      description: `A modern video sharing platform built for developers to upload, stream, and share technical content. Features comments, likes, subscriptions, and responsive UI optimized for code tutorials and tech videos.`,
       technologies: [
         "React",
         "Node.js",
@@ -454,8 +425,7 @@ export const DATA = {
       active: true,
       amount: "$650",
       badge: "Current",
-      description:
-        "Third freelancing project: developing a comprehensive scalable SaaS solution for cold storage facilities in local areas, featuring advanced inventory management, real-time temperature monitoring and tracking, automated alerts for storage conditions, and optimized operational workflows to enhance efficiency and reduce waste.",
+      description: `Third freelancing project: developing a comprehensive scalable SaaS solution for cold storage facilities in local areas, featuring advanced inventory management, real-time temperature monitoring and tracking, automated alerts for storage conditions, and optimized operational workflows to enhance efficiency and reduce waste.`,
       technologies: [
         "React",
         "Next.js",
@@ -477,8 +447,7 @@ export const DATA = {
       active: true,
       amount: "$125",
       badge: "Delivered",
-      description:
-        "A comprehensive modern real estate platform with detailed property listings, advanced search filters with multiple parameters, immersive virtual tours, and interactive maps. Features robust inquiry management system and analytics dashboard to help clients find their dream properties efficiently.",
+      description: `A comprehensive modern real estate platform with detailed property listings, advanced search filters with multiple parameters, immersive virtual tours, and interactive maps. Features robust inquiry management system and analytics dashboard to help clients find their dream properties efficiently.`,
       technologies: [
         "React",
         "Next.js",
@@ -500,8 +469,7 @@ export const DATA = {
       active: true,
       amount: "$350",
       badge: "Delivered",
-      description:
-        "A comprehensive modern dental clinic management system with seamless appointment booking, detailed patient records management, automated billing and invoicing, and payment processing. Streamlined clinical operations resulting in 40% faster patient processing and improved overall patient experience.",
+      description: `A comprehensive modern dental clinic management system with seamless appointment booking, detailed patient records management, automated billing and invoicing, and payment processing. Streamlined clinical operations resulting in 40% faster patient processing and improved overall patient experience.`,
       technologies: [
         "React",
         "Next.js",
@@ -523,8 +491,7 @@ export const DATA = {
       title: "Technex - Sri Ramswaroop Memorial University",
       dates: "March 2025",
       location: "Lucknow, India",
-      description:
-        "Competed and triumphed in Technex, the premier annual technical fest at Sri Ramswaroop Memorial University, building state-of-the-art technical prototypes and presenting software solutions.",
+      description: `Competed and triumphed in Technex, the premier annual technical fest at Sri Ramswaroop Memorial University, building state-of-the-art technical prototypes and presenting software solutions.`,
       image: "/SRMU.jpg",
       links: [],
     },
@@ -532,8 +499,7 @@ export const DATA = {
       title: "Coding Competition - Sri Ramswaroop Memorial University",
       dates: "September 2024",
       location: "Lucknow, India",
-      description:
-        "Secured 1st Position and Rank 1 in the university-wide Coding Competition at Sri Ramswaroop Memorial University, solving complex data structures and algorithmic challenges.",
+      description: `Secured 1st Position and Rank 1 in the university-wide Coding Competition at Sri Ramswaroop Memorial University, solving complex data structures and algorithmic challenges.`,
       image: "/SRMU.jpg",
       links: [],
     },
@@ -541,8 +507,7 @@ export const DATA = {
       title: "AI Hackathon - Chandigarh University",
       dates: "October 2025",
       location: "Chandigarh, India",
-      description:
-        "Qualified in the AI Hackathon organized by Chandigarh University. Developed AI-powered solutions and competed with teams from across the region.",
+      description: `Qualified in the AI Hackathon organized by Chandigarh University. Developed AI-powered solutions and competed with teams from across the region.`,
       image:
         "/chandigarhuniversityup_logo.jpg",
       links: [],
@@ -551,8 +516,7 @@ export const DATA = {
       title: "Smart India Hackathon",
       dates: "August 2025",
       location: "India",
-      description:
-        "Participated in Smart India Hackathon 2025, India's largest hackathon initiative. Collaborated with team members to develop innovative solutions addressing real-world problems.",
+      description: `Participated in Smart India Hackathon 2025, India's largest hackathon initiative. Collaborated with team members to develop innovative solutions addressing real-world problems.`,
       image:
         "/SIH2.webp",
       links: [],
@@ -561,14 +525,14 @@ export const DATA = {
   osContributions: [
     {
       name: "Cal.com",
-      description: "Open-source scheduling infrastructure",
+      description: `Open-source scheduling infrastructure`,
       logo: "/cal.avif",
       href: "https://cal.com",
       isCurrent: true,
     },
     {
       name: "Dodo Payment",
-      description: "Open-source payment infrastructure",
+      description: `Open-source payment infrastructure`,
       logo: "/dodopayments_logo.jpg",
       href: "https://dodopayments.com",
       isCurrent: false,

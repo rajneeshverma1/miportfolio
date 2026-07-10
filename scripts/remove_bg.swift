@@ -26,7 +26,7 @@ func removeBackground(inputPath: String, outputPath: String) {
         
         let maskBuffer = try result.generateScaledMaskForImage(
             forInstances: result.allInstances,
-            from: handler
+            from: handler``
         )
         let maskImage = CIImage(cvPixelBuffer: maskBuffer)
         
