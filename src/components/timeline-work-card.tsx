@@ -16,6 +16,7 @@ interface TimelineWorkCardProps {
   specialBadge?: string;
   showWebsite?: boolean;
   isActive?: boolean;
+  hideTimeline?: boolean;
 }
 
 export const TimelineWorkCard = ({
@@ -30,6 +31,7 @@ export const TimelineWorkCard = ({
   specialBadge,
   showWebsite = true,
   isActive = false,
+  hideTimeline = false,
 }: TimelineWorkCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -72,7 +74,9 @@ export const TimelineWorkCard = ({
               </div>
             )}
           </div>
-          <span className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">{period}</span>
+          {period && (
+            <span className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">{period}</span>
+          )}
         </div>
 
         {/* Job Title Badge */}

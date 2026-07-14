@@ -67,6 +67,20 @@ export const DATA = {
 
   work: [
     {
+      company: "The Gap - AI Driven Research",
+      href: "#",
+      badges: [],
+      location: "Remote",
+      title: "Software Engineer Intern",
+      logoUrl: "",
+      start: "Jul 2026",
+      end: "Present",
+      description: `• Selected as one of 10 Software Engineering Interns from a pool of 250+ applicants to contribute to an AI-driven research platform.
+• Helping students, researchers, and builders discover overlooked opportunities across research, innovation, entrepreneurship, and academia.
+• Contributing to product development, collaborating with the startup team, and working on tools that support AI-powered opportunity discovery and research exploration.
+• Focus Areas: Software Engineering, AI Tools, Full-Stack Development, Research Technology, Startup Collaboration.`,
+    },
+    {
       company: "Sidekick (YC P26)",
       href: "#",
       badges: [],

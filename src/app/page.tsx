@@ -106,7 +106,7 @@ export default async function Page() {
                   href={work.href}
                   location={work.location}
                   title={work.title}
-                  period={`${work.start} - ${work.end ?? "Present"}`}
+                  period={id < 3 ? "" : `${work.start} - ${work.end ?? "Present"}`}
                   description={work.description}
                   number={
                     // Exclude duplicate timeline numbers for internships within the same company
